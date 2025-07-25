@@ -1,2 +1,2 @@
-# github.io
-stub profile site
+# isidorelu.com
+profile site
