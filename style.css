@@ -1,0 +1,149 @@
+h1 {
+  font-size: 2em;
+  margin-top: 0.15em;
+  margin-bottom: 0.15em;
+}
+
+h2 {
+  font-size: 1.8em;
+  margin-top: 0.15em;
+  margin-bottom: 0.15em;
+}
+
+body {
+  font-family: serif;
+  background-color: #fff;
+  color: #000000;
+  line-height: 1.5;
+  text-align: center;
+}
+
+main {
+   margin: 0 5%;
+}
+
+@media (max-width: 992px) {
+  main {
+    margin: 0;
+  }
+}
+
+header {
+   text-align: left;
+}
+
+.widget-header {
+   text-align: center;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.col {
+    flex: 1;
+    padding:0 1rem;
+}
+
+section {
+   text-align: left;
+}
+
+.links {
+   text-align: center;
+}
+
+.blurb {
+   /* text-align: left; */
+}
+
+.updates {
+   border: 1px solid black;
+   margin-top: 0.5em;
+}
+
+.pinned-note {
+   font-size: 0.9em;
+   text-align: left;
+   border: 1px solid black;
+   padding: 1em;
+}
+
+.note {
+   font-size: 0.9em;
+   text-align: left;
+   border-bottom: 1px solid black;
+   padding: 1em;
+}
+
+ul.topnav {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  /* border-left: 1px solid black; */
+}
+
+ul.topnav li {
+   display: flex;
+}
+
+ul.topnav li a {
+  display: block;
+  padding: 0.2em 1em;
+  /* margin: 0.05em; */
+  text-decoration: none;
+  border: 1px solid black;
+  /* border-left: none; */
+}
+ul.topnav li a:hover {
+  background-color: #dddddd;
+}
+
+section {
+     text-align: center;
+}
+
+/* GOODREADS WIDGET */
+#customize-list {
+   float: left;
+   margin-left: 20px;
+   list-style: none;
+}
+#gr_updates_widget {
+   float: left;
+   border-radius: 5px;
+   background-color: #fff;
+   border: solid #683205 10px;
+   -webkit-box-shadow:
+      0px 0px 4px 1px #595959,
+      inset 0px 0px 0px 1px #7d730b;
+   -moz-box-shadow:
+      0px 0px 4px 1px #595959,
+      inset 0px 0px 0px 1px #7d730b;
+   box-shadow:
+      0px 0px 4px 1px #595959,
+      inset 0px 0px 0px 1px #7d730b;
+   padding: 15px;
+   width: 100%;
+   max-width: 400px;
+   box-sizing: border-box;
+}
+#gr_footer {
+   margin-bottom: 0px;
+   height: 30px;
+}
+#gr_updates_widget p {
+   padding: 0px;
+   margin: 0;
+   font-size: 14px;
+}
+#gr_footer img {
+   width: 100px;
+   float: left;
+}
+
