@@ -8,7 +8,7 @@
       <meta name="author" content="Isidore Lu (isid or)" />
       <meta name="robots" content="index, follow" />
 
-      <title>NOTES / ISIDORELU.COM</title>
+      <title>ISIDORELU.COM</title>
       <link rel="icon" href="prof-pic.jpg" type="image/jpeg" />
       <link rel="stylesheet" href="style.css" />
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
@@ -43,47 +43,54 @@
 
    <body>
       <main>
+         <!-- daily video widget -->
+         <section ="youtube">
+            <script>
+               const API_KEY = "AIzaSyAegbe0hzhilZJmQifM0EZfc-u4QvZwug4";
+               const PLAYLIST_ID = "PLOHoVaTp8R7ccrQM3EpCTVDdwHhXrJhXS";
+               const MAX_RESULTS = 50;
+
+               async function getVideoOfTheDay() {
+                  const today = new Date();
+                  const seed = today.getFullYear() * 10000 + (today.getMonth() + 1) * 100 + today.getDate();
+
+                  const res = await fetch(`https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&maxResults=${MAX_RESULTS}&playlistId=${PLAYLIST_ID}&key=${API_KEY}`);
+                  const data = await res.json();
+
+                  const videos = data.items.map((item) => item.contentDetails.videoId);
+                  const index = seed % videos.length;
+                  const videoId = videos[index];
+
+                  document.getElementById("youtube").src = `https://www.youtube.com/embed/${videoId}`;
+               }
+
+               getVideoOfTheDay();
+            </script>
+            <iframe id="youtube" width="560" height="315" frameborder="0" allowfullscreen></iframe>
+         </section>
 
          <div class="row">
             <div class="col">
-               <header class="widget-header">
-                  <h2>NOTES/UPDATES</h2>
+               <header>
+                  <h1>MEDIA LOGGING</h1>
                </header>
             </div>
          </div>
 
          <div class="row">
             <div class="col">
-               
-               <section class="pinned-note">
-                  <strong>ISIDORE</strong> • <em>PINNED UPDATE: 2026/01/05</em>
-                  <p>
-                  I'm currently in San Francisco on holiday break until January 12th.
-                  </p>
-               </section>
+               <ul class="topnav">
+                  <li><a href="about.html">Reads</a></li>
+                  <li><a href="notes.html">Watches</a></li>
+                  <li><a href="media_log.html">Shows/Exhibitions</a></li>
+                  <li><a href="#">Listens</a></li>
+                  <li><a href="#">Articles</a></li>
+                  <li><a href="#">Substacks</a></li>
+                  <li><a href="#">Resume/CV</a></li>
+                  <li><a href="https://isidbrand.info">Artist Project</a></li>
+               </ul>
 
-               <section class="note">
-                  <strong>ISIDORE</strong> • <em> NOTE: 2026/01/13</em>
-                  <p>
-                  Come earlier to 150 lecture. There's too many people
-                  </p>
-               </section>
-
-               <section class="note">
-                  <strong>ISIDORE</strong> • <em> UPDATE: 2026/01/05</em>
-                  <p>
-                  Missed flight this morning.
-                  </p>
-               </section>
-
-               <section class="note">
-                  <strong>ISIDORE</strong> • <em> UPDATE: 2026/01/05</em>
-                  <p>
-                  There is nothing happening now.
-                  </p>
-               </section>
-
-            </div>
+            <div class="col">
          </div>
       </main>
 

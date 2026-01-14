@@ -10,6 +10,13 @@ h2 {
   margin-bottom: 0.15em;
 }
 
+h3 {
+  font-size: 1.6em;
+  font-style: italic;
+  margin-top: 0.15em;
+  margin-bottom: 0.15em;
+}
+
 body {
   font-family: serif;
   background-color: #fff;
@@ -26,6 +33,11 @@ main {
   main {
     margin: 0;
   }
+}
+
+#clock {
+   text-align: left;
+   font-style: italic;
 }
 
 header {
@@ -76,6 +88,65 @@ section {
    text-align: left;
    border-bottom: 1px solid black;
    padding: 1em;
+}
+
+.capsule {
+   max-width: 18em;
+   height: fit-content;
+   font-size: 0.9em;
+   text-align: left;
+   border: 1px solid black;
+   padding: 1em;
+   margin: 1em;
+}
+
+.linkbox a {
+  padding: 0.2em;
+  text-decoration: none;
+  border: 1px solid black;
+  background-color: #eeeeee;
+  /* white-space: nowrap; */
+}
+
+.linkbox a:hover {
+  background-color: #dddddd;
+  font-weight: normal;
+}
+
+a:visited {
+   /* color: blue; */
+}
+
+ul.boxlist {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid black;
+  text-align: center;
+}
+
+ul.boxlist li {
+   display: flex;
+   border: 1px solid black;
+   border-top: none;
+   text-align: center;
+   align-items: center;
+   justify-content: center;
+}
+
+ul.boxlist li a {
+  display: block;
+  padding: 0.2em 1em;
+  text-decoration: none;
+  background-color: #eeeeee;
+  width: 100%;
+}
+ul.boxlist li a:hover {
+  background-color: #dddddd;
+  width: 100%;
 }
 
 ul.topnav {

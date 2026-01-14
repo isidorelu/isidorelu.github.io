@@ -43,15 +43,13 @@
    </head>
 
    <body>
-
-         <p>
-         <marquee><strong>IN 2025, ISIDORE HAS
-            READ <u><em>40</em> BOOKS</u>, 
-            WATCHED <u><em>58</em> FILMS</u>, 
-            POSTED <u><em>11</em> SUBSTACKS</u>, 
-
-      </strong></marquee>
-         </p>
+      <p>
+         <marquee>
+            <strong
+               >IN 2025, ISIDORE HAS READ <u><em>40</em> BOOKS</u>, WATCHED <u><em>58</em> FILMS</u>, POSTED <u><em>11</em> SUBSTACKS</u>,
+            </strong>
+         </marquee>
+      </p>
 
       <main>
          <!-- spotify widget -->
@@ -59,8 +57,14 @@
             <iframe data-testid="embed-iframe" style="border-radius: 12px" src="https://open.spotify.com/embed/playlist/7kzbOAqJVkpTuAq9WHV3dj?utm_source=generator" width="50%" height="100" align="right" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
          </section>
 
+         <!-- main header -->
          <div class="row">
             <div class="col">
+               <div id=clock>
+               <span id="live-date"></span>
+               <span id="live-clock"></span>
+               </div>
+               <script src="clock.js"></script>
                <header>
                   <h1>ISIDORE LU • 魯裕源 • ルーイジドール</h1>
                </header>
@@ -69,16 +73,7 @@
 
          <div class="row">
             <div class="col">
-               <ul class="topnav">
-                  <li><a href="about.html">Blurbs</a></li>
-                  <li><a href="notes.html">Updates</a></li>
-                  <li><a href="#">Media Logs</a></li>
-                  <li><a href="#">Playlists</a></li>
-                  <li><a href="#">Academics</a</li>
-                  <li><a href="#">Substacks</a</li>
-                  <li><a href="#">Resume/CV</a</li>
-                  <li><a href="https://isidbrand.info">Artist Project</a></li>
-               </ul>
+               <div id="nav-placeholder"></div>
 
                <div class="row">
                   <div class="col">
@@ -96,7 +91,7 @@
 
                   <div class="col">
                      <section class="updates">
-                  <iframe width="auto" height="400px" frameborder="0" src="notes.html" title="notes and updates"></iframe>
+                        <iframe width="auto" height="400px" frameborder="0" src="notes.html" title="notes and updates"></iframe>
                      </section>
                   </div>
                </div>
@@ -158,7 +153,7 @@
 
                <!-- youtube widget -->
                <section class="youtube">
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/uP26mMDd-i0?si=S1dhQCSQ8xvpHvic" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                  <iframe width="100%" height="315" src="https://www.youtube.com/embed/uP26mMDd-i0?si=S1dhQCSQ8xvpHvic" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                </section>
 
                <!-- substack widget-->
@@ -183,7 +178,7 @@
 
                <!-- tiktok widget -->
                <section class="tiktok">
-<iframe src="https://widgets.sociablekit.com/tiktok-feed/iframe/25639362" frameborder="0" width="100%" height="400px"></iframe>
+                  <iframe src="https://widgets.sociablekit.com/tiktok-feed/iframe/25639362" frameborder="0" width="100%" height="400px"></iframe>
                </section>
             </div>
 
@@ -289,23 +284,16 @@
                </section>
 
                <section class="letterboxd">
-                  <iframe title="Letterboxd Diary" width="100%" height="800"
-style="border: 1px solid black;background: white;border-radius: 0;"
-src="https://lb-embed-content.bokonon.dev?username=isid__or">
-</iframe>
+                  <iframe title="Letterboxd Diary" width="100%" height="800" style="border: 1px solid black; background: white; border-radius: 0" src="https://lb-embed-content.bokonon.dev?username=isid__or"> </iframe>
                </section>
-
             </div>
          </div>
       </main>
 
       <footer>
-         <p>
-            <br />
-            <strong><em>isidorel [AT] andrew [DOT] cmu [DOT] edu.</em></strong
-            ><br />
-            © 2025 Isidore Lu.
-         </p>
+         <div id="footer-placeholder"></div>
       </footer>
+
+      <script src="load-components.js"></script>
    </body>
 </html>
