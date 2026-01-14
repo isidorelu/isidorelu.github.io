@@ -45,9 +45,9 @@
    <body>
       <p>
          <marquee>
-            <strong
-               >IN 2025, ISIDORE HAS READ <u><em>40</em> BOOKS</u>, WATCHED <u><em>58</em> FILMS</u>, POSTED <u><em>11</em> SUBSTACKS</u>,
-            </strong>
+         <strong>
+            IN 2025, ISIDORE READ <u><em>40</em> BOOKS</u>, WATCHED <u><em>62</em> FILMS</u>, POSTED <u><em>11</em> SUBSTACKS</u>, COMPLETED <u><em>72</em> COURSE UNITS</u>, POSTED <u><em>5</em> YOUTUBE VIDEOS</u>, ATTENDED <u><em>45</em> SHOWS/EXHIBITIONS</u>, RELEASED <u><em>1</em> SONG</u>, COMPLETED <u><em>1</em> INTERNSHIP</u>, & RELEASED <u><em>1</em> MUSIC VIDEO</u>.
+         </strong>
          </marquee>
       </p>
 
@@ -60,9 +60,9 @@
          <!-- main header -->
          <div class="row">
             <div class="col">
-               <div id=clock>
-               <span id="live-date"></span>
-               <span id="live-clock"></span>
+               <div id="clock">
+                  <span id="live-date"></span>,
+                  <span id="live-clock"></span>
                </div>
                <script src="clock.js"></script>
                <header>
@@ -88,7 +88,6 @@
                         </p>
                      </section>
                   </div>
-
                   <div class="col">
                      <section class="updates">
                         <iframe width="auto" height="400px" frameborder="0" src="notes.html" title="notes and updates"></iframe>
@@ -166,20 +165,11 @@
                   <script async src="https://substack.com/embedjs/embed.js" charset="utf-8"></script>
                </section>
 
-               <!-- goodreads widget -->
-               <section class="goodreads">
-                  <div id="gr_updates_widget">
-                     <iframe sandbox id="the_iframe" src="https://goodreads.com/widgets/user_update_widget?height=400&num_updates=3&user=184416706&width=300" width="298" height="330" frameborder="0"></iframe>
-                     <div id="gr_footer">
-                        <a href="https://www.goodreads.com/"><img alt="Goodreads: Book reviews, recommendations, and discussion" src="https://s.gr-assets.com/images/layout/goodreads_logo_140.png" /></a>
-                     </div>
-                  </div>
+               <!-- letterboxd  widget -->
+               <section class="letterboxd">
+                  <iframe title="Letterboxd Diary" width="100%" height="800" style="border: 1px solid black; background: white; border-radius: 0" src="https://lb-embed-content.bokonon.dev?username=isid__or"> </iframe>
                </section>
 
-               <!-- tiktok widget -->
-               <section class="tiktok">
-                  <iframe src="https://widgets.sociablekit.com/tiktok-feed/iframe/25639362" frameborder="0" width="100%" height="400px"></iframe>
-               </section>
             </div>
 
             <div class="col">
@@ -269,22 +259,22 @@
 
                <!-- isidbrand widget -->
                <section class="isidbrand">
-                  <iframe width="70%" height="400" src="https://isidbrand.info" title="isidbrand  artist project"></iframe>
+                  <iframe width="90%" height="400" src="https://isidbrand.info" title="isidbrand  artist project"></iframe>
                </section>
 
-               <section class="blurb">
-                  <p>
-                     <strong>ISIDORE LU</strong> is a <strong><em>pop musician</em></strong
-                     >, <strong><em>visual artist</em></strong
-                     >, & <strong><em>computer science student</em></strong
-                     >.<br />Currently pursuing a
-                     <strong>B.S. in MUSIC & TECHNOLOGY (Computer Science Focus)</strong>
-                     @ <strong>Carnegie Mellon</strong><br />with minors in <em>Business Administration</em> + Literature & Culture.<br /><br />Based in <strong>San Francisco</strong>, <strong>Pittsburgh</strong>, and <strong>New York City</strong>. <br /><br />
-                  </p>
+               <!-- goodreads widget -->
+               <section class="goodreads">
+                  <div id="gr_updates_widget">
+                     <iframe sandbox id="the_iframe" src="https://goodreads.com/widgets/user_update_widget?height=400&num_updates=3&user=184416706&width=300" width="298" height="330" frameborder="0"></iframe>
+                     <div id="gr_footer">
+                        <a href="https://www.goodreads.com/"><img alt="Goodreads: Book reviews, recommendations, and discussion" src="https://s.gr-assets.com/images/layout/goodreads_logo_140.png" /></a>
+                     </div>
+                  </div>
                </section>
 
-               <section class="letterboxd">
-                  <iframe title="Letterboxd Diary" width="100%" height="800" style="border: 1px solid black; background: white; border-radius: 0" src="https://lb-embed-content.bokonon.dev?username=isid__or"> </iframe>
+               <!-- tiktok widget -->
+               <section class="tiktok">
+                  <iframe src="https://widgets.sociablekit.com/tiktok-feed/iframe/25639362" frameborder="0" width="100%" height="400px"></iframe>
                </section>
             </div>
          </div>
