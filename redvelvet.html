@@ -8,7 +8,7 @@
       <meta name="author" content="Isidore Lu (isid or)" />
       <meta name="robots" content="index, follow" />
 
-      <title>MEDIA LOG / ISIDORELU.COM</title>
+      <title>RED VELVET / ISIDORELU.COM</title>
       <link rel="icon" href="prof-pic.jpg" type="image/jpeg" />
       <link rel="stylesheet" href="style.css" />
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
@@ -43,51 +43,55 @@
 
    <body>
       <main>
-         <!-- daily video widget -->
-         <section ="youtube">
-            <script>
-               const API_KEY = "AIzaSyAegbe0hzhilZJmQifM0EZfc-u4QvZwug4";
-               const PLAYLIST_ID = "PLOHoVaTp8R7ccrQM3EpCTVDdwHhXrJhXS";
-               const MAX_RESULTS = 50;
-
-               async function getVideoOfTheDay() {
-                  const today = new Date();
-                  const seed = today.getFullYear() * 10000 + (today.getMonth() + 1) * 100 + today.getDate();
-
-                  const res = await fetch(`https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&maxResults=${MAX_RESULTS}&playlistId=${PLAYLIST_ID}&key=${API_KEY}`);
-                  const data = await res.json();
-
-                  const videos = data.items.map((item) => item.contentDetails.videoId);
-                  const index = seed % videos.length;
-                  const videoId = videos[index];
-
-                  document.getElementById("youtube").src = `https://www.youtube.com/embed/${videoId}`;
-               }
-
-               getVideoOfTheDay();
-            </script>
-            <iframe id="youtube" width="560" height="315" frameborder="0" allowfullscreen></iframe>
-            <p><strong>Random Music Video of the Day.</strong></p>
-         </section>
-
+         <!-- main header -->
          <div class="row">
             <div class="col">
+               <div id="clock">
+                  <span id="live-date"></span>,
+                  <span id="live-clock"></span>
+               </div>
+               <script src="clock.js"></script>
                <header>
-                  <h1>MEDIA LOGGING</h1>
+                  <h1>ISIDORE LU • 魯裕源 • ルーイジドール</h1>
                </header>
             </div>
          </div>
 
+         <div class="col">
+            <div id="nav-placeholder"></div>
+         </div>
+
+         <div class="space"></div>
+
          <div class="row">
             <div class="col">
-               <ul class="topnav">
-                  <li><a href="https://www.goodreads.com/user/show/184416706-isidore">Reads</a></li>
-                  <li><a href="https://letterboxd.com/isid__or/">Watches</a></li>
-                  <li><a href="2025_shows.html">Shows/Exhibitions</a></li>
-                  <li><a href="https://open.spotify.com/user/1224islu">Listens</a></li>
-               </ul>
+               <h1 style="text-align: left; font-size: 2.3em">RED VELVET</h1>
+               <p style="text-align:left;">
+               <a href="https://open.spotify.com/track/6xQWcs6yZrpWInsNwNcjRq?si=1266d69a2120402b" style="color:green;"><i class="fab fa-spotify"></i> <strong>Spotify</strong></a>    
 
+               <a href="https://music.apple.com/us/album/red-velvet/1863603329?i=1863603330" style="color:purple;"><i class="fas fa-music"></i> <strong>Apple Music</strong></a>    
+
+               <a href="https://youtu.be/BV0A1_fUioU?si=x62YxcoNQXGCmdPD" style="color:red;"><i class="fab fa-youtube"></i> <strong>YouTube</strong></a>    
+
+               <section class="headline-image">
+                  <img src="red_velvet.jpg" alt="Single artwork for Red Velvet by isid or" style="max-width: 100%; height: auto" />
+               </section>
+            </div>
             <div class="col">
+
+         <div class="space"></div>
+
+
+               <p style="text-align:left;">
+               ISID0013: isid or - Red Velvet / Gradually we realized we didn't know anything.<br>Released January 23, 2026<br>
+               Performed by isid or<br>
+               Written by Isidore Lu<br>
+               Produced by Janghoon & isid or<br>
+               Mixed/Mastered by Isidore Lu<br>
+Artwork by mini lis☆ & Isidore<br>
+<br>
+               ©℗ 2026 isid music</p>
+            </div>
          </div>
       </main>
 

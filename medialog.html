@@ -8,7 +8,7 @@
       <meta name="author" content="Isidore Lu (isid or)" />
       <meta name="robots" content="index, follow" />
 
-      <title>ACADEMICS / ISIDORELU.COM</title>
+      <title>MEDIA LOG / ISIDORELU.COM</title>
       <link rel="icon" href="prof-pic.jpg" type="image/jpeg" />
       <link rel="stylesheet" href="style.css" />
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
@@ -66,51 +66,60 @@
 
          <div class="row">
             <div class="col">
-               <header class="widget-header">
-                  <h2>ACADEMICS</h2>
+         <!-- daily video widget -->
+         <section ="youtube">
+            <script>
+               const API_KEY = "AIzaSyAegbe0hzhilZJmQifM0EZfc-u4QvZwug4";
+               const PLAYLIST_ID = "PLOHoVaTp8R7ccrQM3EpCTVDdwHhXrJhXS";
+               const MAX_RESULTS = 50;
+
+               async function getVideoOfTheDay() {
+                  const today = new Date();
+                  const seed = today.getFullYear() * 10000 + (today.getMonth() + 1) * 100 + today.getDate();
+
+                  const res = await fetch(`https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&maxResults=${MAX_RESULTS}&playlistId=${PLAYLIST_ID}&key=${API_KEY}`);
+                  const data = await res.json();
+
+                  const videos = data.items.map((item) => item.contentDetails.videoId);
+                  const index = seed % videos.length;
+                  const videoId = videos[index];
+
+                  document.getElementById("youtube").src = `https://www.youtube.com/embed/${videoId}`;
+               }
+
+               getVideoOfTheDay();
+            </script>
+            <iframe id="youtube" width="560" height="315" frameborder="0" allowfullscreen></iframe>
+            <p><strong>Random Music Video of the Day.</strong></p>
+         </section>
+            </div>
+            <div class="col">
+         <div class="row">
+            <div class="col">
+               <header>
+                  <h1>MEDIA LOGGING</h1>
                </header>
             </div>
          </div>
 
          <div class="row">
             <div class="col">
-                  <p>
-                  <span class="linkbox"><a href="https://isidorelu.com"><strong>ISIDORE LU</strong></a></span> 
-                  currently attends <span class="linkbox"><a href=https://en.wikipedia.org/wiki/Carnegie_Mellon_University><strong>Carnegie Mellon University</strong></a></span>
-                  <br>
-                  <br>
-                  Pursuing a <strong>Bachelor of Science</strong> in <span class="linkbox"><a href="https://www.cmu.edu/cfa/music/programs/undergraduate-programs/undergrad-music-technology.html"><strong>MUSIC & TECHNOLOGY</strong></a></span>
-               <br>
-               <br>
-               With a <strong>Focus in </strong><span class="linkbox"><a href="https://www.cs.cmu.edu"><strong>Computer Science</strong></a></span>
-               <br>
-               <br>
-               & minors in <span class="linkbox"><a href="http://coursecatalog.web.cmu.edu/schools-colleges/tepper/undergraduatebusinessadministrationprogram/#minorstextcontainer"><strong><em>Business Administration</em></strong></a></span> + <span class="linkbox"><a href=http://coursecatalog.web.cmu.edu/schools-colleges/dietrichcollegeofhumanitiesandsocialsciences/departmentofenglish/#minorstext"><strong>Literature & Culture</strong></a></span>.
-            </p>
-            <br>
+               <ul class="topnav">
+                  <li><a href="https://www.goodreads.com/user/show/184416706-isidore">Reads</a></li>
+                  <li><a href="https://letterboxd.com/isid__or/">Watches</a></li>
+                  <li><a href="2025_shows.html">Shows/Exhibitions</a></li>
+                  <li><a href="https://open.spotify.com/user/1224islu">Listens</a></li>
+               </ul>
 
-                  <p>
-                  This semester I am taking:
-                  <br>15-150 Principles of Functional Programming (Michael Erdmann/Zeliha Dilsun Kaynar, 12 units),
-                  <br>15-322 Intro to Computer Music (Chris Donahue, 9 units),
-                  <br>80-100 Intro to Philosophy (Harrison Payne, 9 units),
-                  <br>& 57-572 Music & Technology Project (Riccardo Schultz, 12 units).
-                  </p>
-                  <br>
-
-                  <p>
-                  <strong>Total Units Completed</strong>: 316<br>
-                  <strong>Semesters Remaining</strong>: 3<br>
-                  <strong>Cumulative QPA</strong>: 3.45<br>
-                  </p>
-
-            </div>
+            <div class="col">
          </div>
+            </div>
       </main>
 
       <footer>
          <div id="footer-placeholder"></div>
       </footer>
+
       <script src="load-components.js"></script>
    </body>
 </html>
