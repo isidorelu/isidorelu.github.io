@@ -41,7 +41,21 @@ main {
 
 #clock {
    text-align: left;
+   /* font-style: italic; */
+}
+
+#live-date {
    font-style: italic;
+}
+
+#live-clock {
+   font-style: italic;
+}
+
+.announcement {
+   /* border: 1px solid black; */
+   margin-bottom: 1em;
+   padding: 0.5em;
 }
 
 header {
@@ -59,12 +73,38 @@ header {
 }
 
 .col {
+   position: relative;
     flex: 1;
     padding:0 1rem;
 }
 
 section {
    text-align: left;
+}
+
+.minibio {
+   position: absolute;
+   z-index: 2;
+   width: 25%;
+   display:flex;
+   margin: 1em 0;
+   padding: 0 0.2em;
+   text-align:left;
+   font-size:0.8em;
+   border: 1px solid black;
+}
+
+@media (max-width: 1200px) {
+   .minibio {
+      position: relative;
+      width:fit-content;
+   }
+}
+
+@media (max-width: 768px) {
+  .minibio {
+    width: 100%;
+  }
 }
 
 .links {
@@ -74,6 +114,7 @@ section {
 .blurb {
    /* text-align: left; */
 }
+
 
 .updates {
    border: 1px solid black;
@@ -94,14 +135,92 @@ section {
    padding: 1em;
 }
 
-.capsule {
-   max-width: 18em;
+.gallery {
+   width:100%;
+   height:auto;
+   display:flex;
+   flex-wrap:nowrap;
+}
+
+@media (max-width:768px) {
+   .gallery {
+      flex-wrap:wrap;
+   }
+}
+
+.group {
+
+}
+
+.subgroup {
+   border: 1px solid black;
+   padding: 0.5em;
+   margin: 0.5em 0;
+   height:fit-content;
+}
+
+.subgallery {
+   width:100%;
+   height:auto;
+   display:flex;
+   flex-wrap:wrap;
+}
+
+.subgallery .row {
+   display:flex;
+   flex-direction:row;
+   flex-wrap:nowrap;
+}
+
+
+.subgallery .capsule {
+   max-width: 10em;
+   height: fit-content;
+   font-size: 0.9em;
+   text-align: left;
+   padding: 1em;
+   margin: 1em;
+}
+
+@media (max-width:768px) {
+   .subgallery-row {
+      flex-wrap:nowrap;
+   }
+}
+
+.pinned-capsule {
+   max-width: 36em;
    height: fit-content;
    font-size: 0.9em;
    text-align: left;
    border: 1px solid black;
    padding: 1em;
    margin: 1em;
+}
+.capsule {
+   max-width: 36em;
+   height: fit-content;
+   font-size: 0.9em;
+   text-align: left;
+   padding: 1em;
+   margin: 1em;
+}
+
+.capsule .caption {
+   text-align:center;
+}
+
+.capsule .caption a {
+   text-decoration:none;
+   color:black;
+}
+
+.linkpage-artwork {
+   min-width:18em;
+}
+
+.linkpage-merch-image {
+   min-width:12em;
 }
 
 .linkbox a {
