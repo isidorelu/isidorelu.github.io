@@ -55,6 +55,7 @@
             </div>
          </div>
 
+         <div class="row">
             <div class="col">
                <div id="nav-placeholder"></div>
             </div>
@@ -64,54 +65,271 @@
 
          <div class="row" id="main-content">
             <div class="col">
-         <!-- daily video widget -->
-         <section ="youtube">
-            <script>
-               const API_KEY = "AIzaSyAegbe0hzhilZJmQifM0EZfc-u4QvZwug4";
-               const PLAYLIST_ID = "PLOHoVaTp8R7ccrQM3EpCTVDdwHhXrJhXS";
-               const MAX_RESULTS = 50;
+               <!-- daily video widget -->
+               <section ="youtube">
+                  <script>
+                     const API_KEY = "AIzaSyAegbe0hzhilZJmQifM0EZfc-u4QvZwug4";
+                     const PLAYLIST_ID = "PLOHoVaTp8R7ccrQM3EpCTVDdwHhXrJhXS";
+                     const MAX_RESULTS = 50;
 
-               async function getVideoOfTheDay() {
-                  const today = new Date();
-                  const seed = today.getFullYear() * 10000 + (today.getMonth() + 1) * 100 + today.getDate();
+                     async function getVideoOfTheDay() {
+                        const today = new Date();
+                        const seed = today.getFullYear() * 10000 + (today.getMonth() + 1) * 100 + today.getDate();
 
-                  const res = await fetch(`https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&maxResults=${MAX_RESULTS}&playlistId=${PLAYLIST_ID}&key=${API_KEY}`);
-                  const data = await res.json();
+                        const res = await fetch(`https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&maxResults=${MAX_RESULTS}&playlistId=${PLAYLIST_ID}&key=${API_KEY}`);
+                        const data = await res.json();
 
-                  const videos = data.items.map((item) => item.contentDetails.videoId);
-                  const index = seed % videos.length;
-                  const videoId = videos[index];
+                        const videos = data.items.map((item) => item.contentDetails.videoId);
+                        const index = seed % videos.length;
+                        const videoId = videos[index];
 
-                  document.getElementById("youtube").src = `https://www.youtube.com/embed/${videoId}`;
-               }
+                        document.getElementById("youtube").src = `https://www.youtube.com/embed/${videoId}`;
+                     }
 
-               getVideoOfTheDay();
-            </script>
-            <iframe id="youtube" width="560" height="315" frameborder="0" allowfullscreen></iframe>
-            <p><strong>Random Music Video of the Day.</strong></p>
-         </section>
+                     getVideoOfTheDay();
+                  </script>
+                  <iframe id="youtube" width="560" height="315" frameborder="0" allowfullscreen></iframe>
+                  <p><strong>Random Music Video of the Day.</strong></p>
+               </section>
             </div>
+
             <div class="col">
-         <div class="row">
-            <div class="col">
-               <header>
-                  <h1>MEDIA LOGGING</h1>
-               </header>
+               <div class="row">
+                  <div class="col">
+                     <header>
+                        <h1>MEDIA LOGGING</h1>
+                     </header>
+                  </div>
+               </div>
+
+               <div class="row">
+                  <div class="col">
+                     <ul class="topnav">
+                        <li><a href="https://www.goodreads.com/user/show/184416706-isidore">Reads</a></li>
+                        <li><a href="https://letterboxd.com/isid__or/">Watches</a></li>
+                        <li><a href="2025shows.html">Shows/Exhibitions</a></li>
+                        <li><a href="https://open.spotify.com/user/1224islu">Listens</a></li>
+                     </ul>
+
+                     <div class="space"></div>
+
+                     <h1 style="font-size: 2em">
+                        <em>[I <a href="https://x.com/isid__or">tweet</a> a lot.]</em>
+                        <br />
+                     </h1>
+                  </div>
+               </div>
+            </div>
+
+            <div class="row">
+               <div class="col">
+                  <div class="space"></div>
+
+                  <h1 style="text-align: left">RECENT WATCHES</h1>
+                     <iframe title="Letterboxd Diary" width="100%" height="800" style="border: 1px solid black; background: white; border-radius: 0" src="https://lb-embed-content.bokonon.dev?username=isid__or"> </iframe>
+                     <div class="space"></div>
+
+                     <h1 style="text-align: left;">RECENT LISTENING</h1>
+                  <iframe data-testid="embed-iframe" style="border-radius: 12px" src="https://open.spotify.com/embed/playlist/0lFeW7modsUZI972ekHtpu?utm_source=generator" width="100%" height="800em" align="right" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+               </div>
+
+               <div class="col">
+                  <div class="space"></div>
+
+                  <h1 style="text-align: left">RECENT READS</h1>
+                  <!-- Show static HTML/CSS as a placeholder in case js is not enabled - javascript include will override this if things work -->
+                  <style type="text/css" media="screen">
+                     .gr_custom_container_1770022507 {
+                        /* customize your Goodreads widget container here*/
+                        border: 1px solid gray;
+                        border-radius: 10px;
+                        padding: 10px 5px 10px 5px;
+                        background-color: #ffffff;
+                        color: #000000;
+                        width: 35em;
+                     }
+                     .gr_custom_header_1770022507 {
+                        /* customize your Goodreads header here*/
+                        border-bottom: 1px solid gray;
+                        width: 100%;
+                        margin-bottom: 5px;
+                        text-align: center;
+                        font-size: 120%;
+                     }
+                     .gr_custom_each_container_1770022507 {
+                        /* customize each individual book container here */
+                        width: 100%;
+                        clear: both;
+                        margin-bottom: 10px;
+                        overflow: auto;
+                        padding-bottom: 4px;
+                        border-bottom: 1px solid #aaa;
+                     }
+                     .gr_custom_book_container_1770022507 {
+                        /* customize your book covers here */
+                        overflow: hidden;
+                        height: 70px;
+                        float: left;
+                        margin-right: 4px;
+                        width: 50px;
+                     }
+                     .gr_custom_author_1770022507 {
+                        /* customize your author names here */
+                        font-size: 14px;
+                     }
+                     .gr_custom_tags_1770022507 {
+                        /* customize your tags here */
+                        font-size: 10px;
+                        color: gray;
+                     }
+                     .gr_custom_rating_1770022507 {
+                        /* customize your rating stars here */
+                        float: right;
+                     }
+                  </style>
+
+                  <div id="gr_custom_widget_1770022507">
+                     <div class="gr_custom_container_1770022507">
+                        <h2 class="gr_custom_header_1770022507">
+                           <a style="text-decoration: none" rel="nofollow" href="https://www.goodreads.com/review/list/184416706-isidore?shelf=read&amp;utm_medium=api&amp;utm_source=custom_widget">isidore&#39;s bookshelf: read</a>
+                        </h2>
+                        <div class="gr_custom_each_container_1770022507">
+                           <div class="gr_custom_book_container_1770022507">
+                              <a title="A Perfect Day to Be Alone" rel="nofollow" href="https://www.goodreads.com/review/show/8242334202?utm_medium=api&amp;utm_source=custom_widget"><img alt="A Perfect Day to Be Alone" border="0" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1694018022l/156512861._SY75_.jpg" /></a>
+                           </div>
+                           <div class="gr_custom_rating_1770022507">
+                              <span class="staticStars notranslate" title="really liked it"><img alt="really liked it" src="https://s.gr-assets.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://s.gr-assets.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://s.gr-assets.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://s.gr-assets.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://s.gr-assets.com/images/layout/gr_red_star_inactive.png" /></span>
+                           </div>
+                           <div class="gr_custom_title_1770022507">
+                              <a rel="nofollow" href="https://www.goodreads.com/review/show/8242334202?utm_medium=api&amp;utm_source=custom_widget">A Perfect Day to Be Alone</a>
+                           </div>
+                           <div class="gr_custom_author_1770022507">by <a rel="nofollow" href="https://www.goodreads.com/author/show/4461217.Nanae_Aoyama">Nanae Aoyama</a></div>
+                        </div>
+                        <div class="gr_custom_each_container_1770022507">
+                           <div class="gr_custom_book_container_1770022507">
+                              <a title="Pride and Prejudice" rel="nofollow" href="https://www.goodreads.com/review/show/8158231622?utm_medium=api&amp;utm_source=custom_widget"><img alt="Pride and Prejudice" border="0" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1612617787l/56969366._SY75_.jpg" /></a>
+                           </div>
+                           <div class="gr_custom_rating_1770022507">
+                              <span class="staticStars notranslate" title="it was amazing"><img alt="it was amazing" src="https://s.gr-assets.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://s.gr-assets.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://s.gr-assets.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://s.gr-assets.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://s.gr-assets.com/images/layout/gr_red_star_active.png" /></span>
+                           </div>
+                           <div class="gr_custom_title_1770022507">
+                              <a rel="nofollow" href="https://www.goodreads.com/review/show/8158231622?utm_medium=api&amp;utm_source=custom_widget">Pride and Prejudice</a>
+                           </div>
+                           <div class="gr_custom_author_1770022507">by <a rel="nofollow" href="https://www.goodreads.com/author/show/1265.Jane_Austen">Jane Austen</a></div>
+                        </div>
+                        <div class="gr_custom_each_container_1770022507">
+                           <div class="gr_custom_book_container_1770022507">
+                              <a title="Much Ado About Nothing" rel="nofollow" href="https://www.goodreads.com/review/show/7073737670?utm_medium=api&amp;utm_source=custom_widget"><img alt="Much Ado About Nothing" border="0" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1327885569l/12957._SY75_.jpg" /></a>
+                           </div>
+                           <div class="gr_custom_rating_1770022507">
+                              <span class="staticStars notranslate" title="really liked it"><img alt="really liked it" src="https://s.gr-assets.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://s.gr-assets.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://s.gr-assets.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://s.gr-assets.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://s.gr-assets.com/images/layout/gr_red_star_inactive.png" /></span>
+                           </div>
+                           <div class="gr_custom_title_1770022507">
+                              <a rel="nofollow" href="https://www.goodreads.com/review/show/7073737670?utm_medium=api&amp;utm_source=custom_widget">Much Ado About Nothing</a>
+                           </div>
+                           <div class="gr_custom_author_1770022507">by <a rel="nofollow" href="https://www.goodreads.com/author/show/947.William_Shakespeare">William Shakespeare</a></div>
+                        </div>
+                        <div class="gr_custom_each_container_1770022507">
+                           <div class="gr_custom_book_container_1770022507">
+                              <a title="Snow Country (Vintage International)" rel="nofollow" href="https://www.goodreads.com/review/show/8140261064?utm_medium=api&amp;utm_source=custom_widget"><img alt="Snow Country" border="0" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1756679502l/14028._SY75_.jpg" /></a>
+                           </div>
+                           <div class="gr_custom_rating_1770022507">
+                              <span class="staticStars notranslate" title="really liked it"><img alt="really liked it" src="https://s.gr-assets.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://s.gr-assets.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://s.gr-assets.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://s.gr-assets.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://s.gr-assets.com/images/layout/gr_red_star_inactive.png" /></span>
+                           </div>
+                           <div class="gr_custom_title_1770022507">
+                              <a rel="nofollow" href="https://www.goodreads.com/review/show/8140261064?utm_medium=api&amp;utm_source=custom_widget">Snow Country</a>
+                           </div>
+                           <div class="gr_custom_author_1770022507">by <a rel="nofollow" href="https://www.goodreads.com/author/show/8550.Yasunari_Kawabata">Yasunari Kawabata</a></div>
+                        </div>
+                        <div class="gr_custom_each_container_1770022507">
+                           <div class="gr_custom_book_container_1770022507">
+                              <a title="Imperial Bedrooms" rel="nofollow" href="https://www.goodreads.com/review/show/8132967238?utm_medium=api&amp;utm_source=custom_widget"><img alt="Imperial Bedrooms" border="0" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1278878105l/7519866._SX50_.jpg" /></a>
+                           </div>
+                           <div class="gr_custom_rating_1770022507">
+                              <span class="staticStars notranslate" title="liked it"><img alt="liked it" src="https://s.gr-assets.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://s.gr-assets.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://s.gr-assets.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://s.gr-assets.com/images/layout/gr_red_star_inactive.png" /><img alt="" src="https://s.gr-assets.com/images/layout/gr_red_star_inactive.png" /></span>
+                           </div>
+                           <div class="gr_custom_title_1770022507">
+                              <a rel="nofollow" href="https://www.goodreads.com/review/show/8132967238?utm_medium=api&amp;utm_source=custom_widget">Imperial Bedrooms</a>
+                           </div>
+                           <div class="gr_custom_author_1770022507">by <a rel="nofollow" href="https://www.goodreads.com/author/show/2751.Bret_Easton_Ellis">Bret Easton Ellis</a></div>
+                        </div>
+                        <div class="gr_custom_each_container_1770022507">
+                           <div class="gr_custom_book_container_1770022507">
+                              <a title="A Bright Ray of Darkness" rel="nofollow" href="https://www.goodreads.com/review/show/8112669001?utm_medium=api&amp;utm_source=custom_widget"><img alt="A Bright Ray of Darkness" border="0" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1602246342l/54875689._SX50_.jpg" /></a>
+                           </div>
+                           <div class="gr_custom_rating_1770022507">
+                              <span class="staticStars notranslate" title="really liked it"><img alt="really liked it" src="https://s.gr-assets.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://s.gr-assets.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://s.gr-assets.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://s.gr-assets.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://s.gr-assets.com/images/layout/gr_red_star_inactive.png" /></span>
+                           </div>
+                           <div class="gr_custom_title_1770022507">
+                              <a rel="nofollow" href="https://www.goodreads.com/review/show/8112669001?utm_medium=api&amp;utm_source=custom_widget">A Bright Ray of Darkness</a>
+                           </div>
+                           <div class="gr_custom_author_1770022507">by <a rel="nofollow" href="https://www.goodreads.com/author/show/2970.Ethan_Hawke">Ethan Hawke</a></div>
+                        </div>
+                        <div class="gr_custom_each_container_1770022507">
+                           <div class="gr_custom_book_container_1770022507">
+                              <a title="The Old Man and the Sea" rel="nofollow" href="https://www.goodreads.com/review/show/8105034405?utm_medium=api&amp;utm_source=custom_widget"><img alt="The Old Man and the Sea" border="0" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1413853675l/386299._SY75_.jpg" /></a>
+                           </div>
+                           <div class="gr_custom_rating_1770022507">
+                              <span class="staticStars notranslate" title="liked it"><img alt="liked it" src="https://s.gr-assets.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://s.gr-assets.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://s.gr-assets.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://s.gr-assets.com/images/layout/gr_red_star_inactive.png" /><img alt="" src="https://s.gr-assets.com/images/layout/gr_red_star_inactive.png" /></span>
+                           </div>
+                           <div class="gr_custom_title_1770022507">
+                              <a rel="nofollow" href="https://www.goodreads.com/review/show/8105034405?utm_medium=api&amp;utm_source=custom_widget">The Old Man and the Sea</a>
+                           </div>
+                           <div class="gr_custom_author_1770022507">by <a rel="nofollow" href="https://www.goodreads.com/author/show/1455.Ernest_Hemingway">Ernest Hemingway</a></div>
+                        </div>
+                        <div class="gr_custom_each_container_1770022507">
+                           <div class="gr_custom_book_container_1770022507">
+                              <a title="Giovanni’s Room" rel="nofollow" href="https://www.goodreads.com/review/show/8086157048?utm_medium=api&amp;utm_source=custom_widget"><img alt="Giovanni’s Room" border="0" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1385246728l/18915870._SY75_.jpg" /></a>
+                           </div>
+                           <div class="gr_custom_rating_1770022507">
+                              <span class="staticStars notranslate" title="really liked it"><img alt="really liked it" src="https://s.gr-assets.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://s.gr-assets.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://s.gr-assets.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://s.gr-assets.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://s.gr-assets.com/images/layout/gr_red_star_inactive.png" /></span>
+                           </div>
+                           <div class="gr_custom_title_1770022507">
+                              <a rel="nofollow" href="https://www.goodreads.com/review/show/8086157048?utm_medium=api&amp;utm_source=custom_widget">Giovanni’s Room</a>
+                           </div>
+                           <div class="gr_custom_author_1770022507">by <a rel="nofollow" href="https://www.goodreads.com/author/show/10427.James_Baldwin">James Baldwin</a></div>
+                        </div>
+                        <div class="gr_custom_each_container_1770022507">
+                           <div class="gr_custom_book_container_1770022507">
+                              <a title="The Stepdaughter" rel="nofollow" href="https://www.goodreads.com/review/show/8054206158?utm_medium=api&amp;utm_source=custom_widget"><img alt="The Stepdaughter" border="0" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1704448136l/199798592._SY75_.jpg" /></a>
+                           </div>
+                           <div class="gr_custom_rating_1770022507">
+                              <span class="staticStars notranslate" title="really liked it"><img alt="really liked it" src="https://s.gr-assets.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://s.gr-assets.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://s.gr-assets.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://s.gr-assets.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://s.gr-assets.com/images/layout/gr_red_star_inactive.png" /></span>
+                           </div>
+                           <div class="gr_custom_title_1770022507">
+                              <a rel="nofollow" href="https://www.goodreads.com/review/show/8054206158?utm_medium=api&amp;utm_source=custom_widget">The Stepdaughter</a>
+                           </div>
+                           <div class="gr_custom_author_1770022507">by <a rel="nofollow" href="https://www.goodreads.com/author/show/52706.Caroline_Blackwood">Caroline Blackwood</a></div>
+                        </div>
+                        <div class="gr_custom_each_container_1770022507">
+                           <div class="gr_custom_book_container_1770022507">
+                              <a title="Passing" rel="nofollow" href="https://www.goodreads.com/review/show/8070382755?utm_medium=api&amp;utm_source=custom_widget"><img alt="Passing" border="0" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1636384216l/57640287._SY75_.jpg" /></a>
+                           </div>
+                           <div class="gr_custom_rating_1770022507">
+                              <span class="staticStars notranslate" title="really liked it"><img alt="really liked it" src="https://s.gr-assets.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://s.gr-assets.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://s.gr-assets.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://s.gr-assets.com/images/layout/gr_red_star_active.png" /><img alt="" src="https://s.gr-assets.com/images/layout/gr_red_star_inactive.png" /></span>
+                           </div>
+                           <div class="gr_custom_title_1770022507">
+                              <a rel="nofollow" href="https://www.goodreads.com/review/show/8070382755?utm_medium=api&amp;utm_source=custom_widget">Passing</a>
+                           </div>
+                           <div class="gr_custom_author_1770022507">by <a rel="nofollow" href="https://www.goodreads.com/author/show/7894.Nella_Larsen">Nella Larsen</a></div>
+                        </div>
+                        <br style="clear: both" />
+                        <center>
+                           <a rel="nofollow" href="https://www.goodreads.com/"><img alt="goodreads.com" style="border: 0" src="https://s.gr-assets.com/images/widget/widget_logo.gif" /></a>
+                        </center>
+                        <noscript> Share <a rel="nofollow" href="https://www.goodreads.com/">book reviews</a> and ratings with isidore, and even join a <a rel="nofollow" href="https://www.goodreads.com/group">book club</a> on Goodreads. </noscript>
+                     </div>
+                  </div>
+                  <script src="https://www.goodreads.com/review/custom_widget/184416706.isidore's%20bookshelf:%20read?cover_position=left&cover_size=small&num_books=10&order=d&shelf=read&show_author=1&show_cover=1&show_rating=1&show_review=1&show_tags=1&show_title=1&sort=date_read&widget_bg_color=FFFFFF&widget_bg_transparent=&widget_border_width=1&widget_id=1770022507&widget_text_color=000000&widget_title_size=medium&widget_width=medium" type="text/javascript" charset="utf-8"></script>
+
+                  <div class="space"></div>
+
+                  <h1 style="text-align: left;">RECENT SHOWS/EXHIBITIONS</h1>
+                  <iframe width="90%" height="800" frameborder="1" src="2025shows.html" title="2025 shows attended"></iframe>
+               </div>
             </div>
          </div>
-
-         <div class="row">
-            <div class="col">
-               <ul class="topnav">
-                  <li><a href="https://www.goodreads.com/user/show/184416706-isidore">Reads</a></li>
-                  <li><a href="https://letterboxd.com/isid__or/">Watches</a></li>
-                  <li><a href="2025shows.html">Shows/Exhibitions</a></li>
-                  <li><a href="https://open.spotify.com/user/1224islu">Listens</a></li>
-               </ul>
-
-            <div class="col">
-         </div>
-            </div>
       </main>
 
       <footer>
