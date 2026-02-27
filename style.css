@@ -197,6 +197,17 @@ section {
    padding: 1em;
    margin: 1em;
 }
+
+.pinned-capsule-wrapper {
+   max-width: 36em;
+   height: fit-content;
+   font-size: 0.9em;
+   text-align: left;
+   /* border: 1px solid black; */
+   /* padding: 1em; */
+   /* margin: 1em; */
+}
+
 .capsule {
    max-width: 36em;
    height: fit-content;
