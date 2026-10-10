@@ -4,7 +4,7 @@
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta name="description" content="Isidore Lu, a.k.a. isid or, is a pop musician, visual artist, and computer science student based in San Francisco, Pittsburgh, and New York City." />
-      <meta name="keywords" content="Isidore Lu, isid or, pop musician, visual artist, Carnegie Mellon, isid or, music, CMU, computer science, student, CS, New York City, San Francisco, Pittsburgh" />
+      <meta name="keywords" content="Isidore Lu, isid or, pop musician, visual artist, Carnegie Mellon, CMU, music, computer science, student, CS, New York City, San Francisco, Pittsburgh" />
       <meta name="author" content="Isidore Lu (isid or)" />
       <meta name="robots" content="index, follow" />
 
@@ -13,7 +13,7 @@
       <link rel="stylesheet" href="style.css" />
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
-      <!-- Open Graph Tags -->
+      <!-- Open Graph -->
       <meta property="og:title" content="ISIDORELU.COM" />
       <meta property="og:description" content="pop music & cs." />
       <meta property="og:image" content="https://isidorelu.com/prof-pic.jpg" />
@@ -21,14 +21,14 @@
       <meta property="og:type" content="website" />
       <meta property="og:locale" content="en_US" />
 
-      <!-- Twitter Card Tags -->
+      <!-- Twitter Card -->
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:title" content="ISIDORELU.COM" />
       <meta name="twitter:description" content="pop music & cs." />
       <meta name="twitter:image" content="https://isidorelu.com/prof-pic.jpg" />
       <meta name="twitter:site" content="@isid__or" />
 
-      <!-- Links Connections -->
+      <!-- Linked profiles -->
       <script type="application/ld+json">
          {
             "@context": "https://schema.org",
@@ -36,47 +36,132 @@
             "name": "Isidore Lu",
             "alternateName": "isid or",
             "url": "https://isidorelu.com",
-            "sameAs": ["https://instagram.com/isid.or", "https://twitter.com/isid__or", "https://tiktok.com/@isid__or", "https://www.youtube.com/@isid__or", "https://isidcore.substack.com/", "https://www.linkedin.com/in/isidorelu", "https://www.goodreads.com/user/show/184416706-isidore", "https://letterboxd.com/isid__or/", "https://open.spotify.com/user/1224islu", "https://isidbrand.info/", "https://github.com/isidorelu"]
+            "sameAs": [
+               "https://instagram.com/isid.or",
+               "https://twitter.com/isid__or",
+               "https://tiktok.com/@isid__or",
+               "https://www.youtube.com/@isid__or",
+               "https://isidcore.substack.com/",
+               "https://www.linkedin.com/in/isidorelu",
+               "https://www.goodreads.com/user/show/184416706-isidore",
+               "https://letterboxd.com/isid__or/",
+               "https://open.spotify.com/user/1224islu",
+               "https://isidbrand.info/",
+               "https://github.com/isidorelu"
+            ]
          }
       </script>
+
+      <!-- Page-specific styles (replaces the old inline styles) -->
+      <style>
+         .event {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5em;
+            align-items: flex-start;
+            margin-bottom: 3em;
+         }
+         .event .poster img {
+            display: block;
+            max-width: 18em;
+            width: 100%;
+            height: auto;
+         }
+         .event .details {
+            flex: 1 1 18em;
+         }
+         .event .rsvp {
+            font-size: 2em;
+            margin: 0 0 0.5em;
+         }
+         .event .lineup {
+            list-style: none;
+            padding: 0;
+            margin: 0.25em 0 1em;
+         }
+         .u {
+            text-decoration: underline;
+         }
+         .past-label {
+            display: inline-block;
+            font-size: 0.8em;
+            font-weight: bold;
+            letter-spacing: 0.15em;
+            padding: 0.2em 0.6em;
+            margin-bottom: 0.6em;
+            border: 1px solid currentColor;
+         }
+         .event.past .poster img {
+            opacity: 0.6;
+            filter: grayscale(40%);
+         }
+      </style>
    </head>
 
    <body>
       <main>
-         <!-- main header -->
          <div class="space"></div>
 
-         <div class="row">
-            <div class="col">
-               <div class="row">
-                  <div class="col">  
-               <section class="poster">
-                  <a href="https://partiful.com/e/XOMzCXr1bJZIFXmYGU5Y">
-                  <img src="love_pop_prerelease_event.png" alt="isid or Sincerely, Mr. Love & Pop Pre-Release Event + End-Of-Summer Party Poster" style="max-width: 18em; height: auto; margin: 0.2em" />
-                  </a>
-               </section>
-                  </div>
-                  <div class="col">
-                     <h1 style="font-size: 2em">
-                        <a href="https://partiful.com/e/XOMzCXr1bJZIFXmYGU5Y">[<em>Free</em> RSVP]</a>
-                        <br />
-                     </h1>
+         <!-- J-pop night -->
+         <article class="event">
+            <section class="poster">
+               <a href="https://partiful.com/e/qNws9LNPfzIOxKvSkcl8">
+                  <img src="jpop_party.png" alt="isid or Sincerely, Mr. Love & Pop J-pop party poster" />
+               </a>
+            </section>
 
-               <section class="blurb">
-                  <p>Since <strong>March</strong>, I’ve met over <span style="text-decoration: underline;">300 <em>Writers, Musicians, Models, DJs, Stylists, Creative Directors, Designers, Nightlife Promoters, Photographers, Influencers, Builders, Bloggers, Filmmakers, Actors, & Fine Artists</em></span> in <strong>My favorite city in the world</strong>.
-         <br>
-               <br>
-               After a Technical burnout, I Gave myself this summer and the Permission to invest my life savings on <em><strong>The thing that</em> I Love <em>more than anything</strong></em>.
-               <br>
-               <br>
-               <span style="text-decoration: underline;">Before I leave in August</span>, I want to get pictures with everyone that I’ve Crossed paths with <strong>(this summer, before, & Have Yet to meet)</strong>, who have made and talked about <em>Art</em> with me. Please come if you can make it.  :)
-               </p>
-               </section>
-                  </div>
+            <section class="details">
+               <h1 class="rsvp">
+                  <a href="https://partiful.com/e/qNws9LNPfzIOxKvSkcl8">[<em>Free</em> RSVP]</a>
+               </h1>
+
+               <div class="blurb">
+                  <p>
+                     An evening of <strong>J-pop, J-core, and anime openings</strong> throughout the years, featuring tracks by Hikaru Utada, Ayumi Hamasaki, Namie Amuro, Koda Kumi, Perfume + Capsule, Globe, Every Little Thing, BoA, T.M.Revolution, Ami Suzuki, m-flo, Crystal Kay, Tommy Febuary6 + Tommy Heavenly6, f5ve, and <em>MORE!</em>
+                  </p>
+
+                  <p><strong>DJ Lineup:</strong></p>
+                  <ul class="lineup">
+                     <li>Aster</li>
+                     <li>Bubucore</li>
+                     <li>Cute Boys</li>
+                     <li>Gagbert</li>
+                  </ul>
+
+                  <p>
+                     Presented by <strong>Isidcore</strong> with <strong>Life After Trance</strong>, in promotion of isid or’s <em>Sincerely, Mr. Love &amp; Pop</em> (Japanese Mini-Album) release. Hosted by isid or.
+                  </p>
                </div>
+            </section>
+         </article>
 
-            </div>
-         </div>
+         <!-- Pre-release + end-of-summer party (past) -->
+         <article class="event past">
+            <section class="poster">
+               <a href="https://partiful.com/e/XOMzCXr1bJZIFXmYGU5Y">
+                  <img src="love_pop_prerelease_event.png" alt="isid or Sincerely, Mr. Love & Pop Pre-Release Event + End-of-Summer Party poster" />
+               </a>
+            </section>
+
+            <section class="details">
+               <span class="past-label">PAST</span>
+               <h1 class="rsvp">
+                  <a href="https://partiful.com/e/XOMzCXr1bJZIFXmYGU5Y">[<em>Free</em> RSVP]</a>
+               </h1>
+
+               <div class="blurb">
+                  <p>
+                     Since <strong>March</strong>, I’ve met over <span class="u">300 <em>Writers, Musicians, Models, DJs, Stylists, Creative Directors, Designers, Nightlife Promoters, Photographers, Influencers, Builders, Bloggers, Filmmakers, Actors, &amp; Fine Artists</em></span> in <strong>My favorite city in the world</strong>.
+                  </p>
+                  <p>
+                     After a Technical burnout, I Gave myself this summer and the Permission to invest my life savings on <em><strong>The thing that</strong></em> <strong>I Love</strong> <em><strong>more than anything</strong></em>.
+                  </p>
+                  <p>
+                     <span class="u">Before I leave in August</span>, I want to get pictures with everyone that I’ve Crossed paths with <strong>(this summer, before, &amp; Have Yet to meet)</strong>, who have made and talked about <em>Art</em> with me. Please come if you can make it. :)
+                  </p>
+               </div>
+            </section>
+         </article>
       </main>
 
       <footer>
