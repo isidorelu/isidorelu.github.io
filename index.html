@@ -301,10 +301,293 @@
 
                <!-- twitter widget -->
                <section class="twitter-profile">
-                  <iframe src="https://widgets.sociablekit.com/twitter-feed/iframe/25636875" frameborder="0" width="100%" height="250px"></iframe>
+<section id="xpc-widget" class="xpc-container" aria-label="X profile">
+  <style>
+    #xpc-widget {
+      --xpc-bg: #ffffff;
+      --xpc-text: #0f1419;
+      --xpc-muted: #536471;
+      --xpc-border: #eff3f4;
+      --xpc-link: #1d9bf0;
+      --xpc-btn-bg: #0f1419;
+      --xpc-btn-text: #ffffff;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 16px;
+      background: var(--xpc-bg);
+      color: var(--xpc-text);
+      border: 1px solid var(--xpc-border);
+      border-radius: 16px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-size: 15px;
+      line-height: 1.35;
+      text-align: left;
+    }
+    @media (prefers-color-scheme: dark) {
+      #xpc-widget {
+        --xpc-bg: #000000;
+        --xpc-text: #e7e9ea;
+        --xpc-muted: #71767b;
+        --xpc-border: #2f3336;
+        --xpc-btn-bg: #eff3f4;
+        --xpc-btn-text: #0f1419;
+      }
+    }
+    #xpc-widget *, #xpc-widget *::before, #xpc-widget *::after { box-sizing: border-box; }
+    #xpc-widget a { color: inherit; text-decoration: none; }
+    #xpc-widget p, #xpc-widget h2 { padding: 0; }
+
+    #xpc-widget .xpc-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+    }
+    #xpc-widget .xpc-avatar {
+      display: block;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      background: #cfd9de;
+      margin: 0;
+    }
+    #xpc-widget .xpc-follow {
+      background: var(--xpc-btn-bg);
+      color: var(--xpc-btn-text);
+      font-weight: 700;
+      padding: 8px 16px;
+      border-radius: 999px;
+      white-space: nowrap;
+    }
+    #xpc-widget .xpc-follow:hover { opacity: .85; }
+
+    #xpc-widget .xpc-name {
+      font-size: 20px;
+      font-weight: 800;
+      line-height: 1.2;
+      margin: 12px 0 0;
+      color: var(--xpc-text);
+    }
+    #xpc-widget .xpc-handle { color: var(--xpc-muted); margin: 2px 0 12px; }
+    #xpc-widget .xpc-bio { margin: 0 0 12px; white-space: pre-line; }
+
+    #xpc-widget .xpc-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px 12px;
+      color: var(--xpc-muted);
+      margin-bottom: 12px;
+    }
+    #xpc-widget .xpc-meta > span,
+    #xpc-widget .xpc-meta > a { display: inline-flex; align-items: center; gap: 4px; }
+    #xpc-widget .xpc-meta > a { color: var(--xpc-link); }
+    #xpc-widget .xpc-meta > a:hover { text-decoration: underline; }
+    #xpc-widget .xpc-meta svg { width: 18px; height: 18px; fill: var(--xpc-muted); flex: none; }
+
+    #xpc-widget .xpc-stats { display: flex; flex-wrap: wrap; gap: 4px 20px; color: var(--xpc-muted); }
+    #xpc-widget .xpc-stats b { color: var(--xpc-text); }
+    #xpc-widget .xpc-stats a:hover { text-decoration: underline; }
+  </style>
+
+  <div class="xpc-card" data-csv="https://docs.google.com/spreadsheets/d/e/2PACX-1vR04-UA9uhWz7grCFzfvI2JPs6K8K_UwjPSMlex16q3ZG1pifSPPnfd34Ox4FFsYuV9FQx1Elbn_uu_/pub?gid=1521399560&single=true&output=csv">
+    <div class="xpc-top">
+      <img class="xpc-avatar" data-field="avatar_url" src="/img/avatar.jpg" alt="Profile photo">
+      <a class="xpc-follow" data-link="" href="https://x.com/yourhandle" target="_blank" rel="noopener">Follow</a>
+    </div>
+
+    <h2 class="xpc-name" data-field="display_name">Display Name</h2>
+    <p class="xpc-handle">@<span data-field="handle">yourhandle</span></p>
+    <p class="xpc-bio" data-field="bio">Your bio goes here.</p>
+
+    <div class="xpc-meta">
+      <span data-hide-empty="location">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+        <span data-field="location">New York, NY</span>
+      </span>
+      <a data-hide-empty="website_url" data-field="website_url" href="https://example.com" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10.6 13.4a1 1 0 0 1 0-1.4l3.3-3.3a1 1 0 1 1 1.4 1.4L12 13.4a1 1 0 0 1-1.4 0zM7.8 19.1a3.9 3.9 0 0 1-2.9-6.7l2.5-2.5a1 1 0 0 1 1.4 1.4l-2.5 2.5a1.9 1.9 0 0 0 2.7 2.7l2.5-2.5a1 1 0 1 1 1.4 1.4l-2.5 2.5a3.9 3.9 0 0 1-2.6 1.2zm8.6-6.5a1 1 0 0 1-.7-1.7l2.5-2.5a1.9 1.9 0 0 0-2.7-2.7l-2.5 2.5a1 1 0 0 1-1.4-1.4l2.5-2.5a3.9 3.9 0 0 1 5.5 5.5l-2.5 2.5a1 1 0 0 1-.7.3z"/></svg>
+        <span data-field="website_label">example.com</span>
+      </a>
+      <span data-hide-empty="joined">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2a1 1 0 0 1 1 1v1h8V3a1 1 0 1 1 2 0v1h1a3 3 0 0 1 3 3v12a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3V7a3 3 0 0 1 3-3h1V3a1 1 0 0 1 1-1zm13 8H4v9a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-9z"/></svg>
+        Joined <span data-field="joined">March 2020</span>
+      </span>
+    </div>
+
+    <div class="xpc-stats">
+      <a data-link="/following" href="https://x.com/yourhandle/following" target="_blank" rel="noopener"><b data-field="following">312</b> Following</a>
+      <a data-link="/verified_followers" href="https://x.com/yourhandle/verified_followers" target="_blank" rel="noopener"><b data-field="followers">1,248</b> Followers</a>
+    </div>
+  </div>
+
+  <script>
+  (function () {
+    var card = document.querySelector("#xpc-widget .xpc-card");
+    if (!card) return;
+    var url = card.getAttribute("data-csv");
+    if (!/^https?:\/\//.test(url)) return; // no link yet: keep fallbacks
+
+    function parseCSV(text) {
+      var rows = [], row = [], f = "", q = false;
+      for (var i = 0; i < text.length; i++) {
+        var c = text[i];
+        if (q) {
+          if (c === '"' && text[i + 1] === '"') { f += '"'; i++; }
+          else if (c === '"') q = false;
+          else f += c;
+        } else if (c === '"') q = true;
+        else if (c === ",") { row.push(f); f = ""; }
+        else if (c === "\n" || c === "\r") {
+          if (c === "\r" && text[i + 1] === "\n") i++;
+          row.push(f); rows.push(row); row = []; f = "";
+        } else f += c;
+      }
+      if (f !== "" || row.length) { row.push(f); rows.push(row); }
+      return rows;
+    }
+    function fmtNum(v) {
+      var n = Number(String(v).replace(/[,\s]/g, ""));
+      return v !== "" && isFinite(n) ? n.toLocaleString("en-US") : v;
+    }
+
+    fetch(url, { cache: "no-store" })
+      .then(function (r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.text(); })
+      .then(function (text) {
+        var d = {};
+        parseCSV(text).forEach(function (r) {
+          var k = (r[0] || "").trim();
+          if (k && k !== "field") d[k] = (r[1] || "").trim();
+        });
+
+        card.querySelectorAll("[data-hide-empty]").forEach(function (el) {
+          var k = el.getAttribute("data-hide-empty");
+          if (k in d && !d[k]) el.style.display = "none";
+        });
+        if (d.website_url && !d.website_label)
+          d.website_label = d.website_url.replace(/^https?:\/\//, "").replace(/\/$/, "");
+        if (d.handle) d.handle = d.handle.replace(/^@/, "");
+
+        card.querySelectorAll("[data-field]").forEach(function (el) {
+          var k = el.getAttribute("data-field"), v = d[k];
+          if (!v) return;
+          if (k === "avatar_url") el.src = v;
+          else if (k === "website_url") el.href = v;
+          else if (k === "following" || k === "followers") el.textContent = fmtNum(v);
+          else el.textContent = v;
+        });
+        if (d.handle) {
+          card.querySelectorAll("[data-link]").forEach(function (el) {
+            el.href = "https://x.com/" + encodeURIComponent(d.handle) + el.getAttribute("data-link");
+          });
+        }
+      })
+      .catch(function (e) { console.warn("X profile widget: couldn't load the sheet, showing fallbacks.", e); });
+  })();
+  </script>
+</section>
+                  <!-- <iframe src="https://widgets.sociablekit.com/twitter-feed/iframe/25636875" frameborder="0" width="100%" height="250px"></iframe> -->
                </section>
+
                <section class="twitter-feed">
-                  <iframe src="https://widgets.sociablekit.com/twitter-feed/iframe/25639654" frameborder="0" width="100%" height="400px"></iframe>
+<div class="tw-feed" data-src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR04-UA9uhWz7grCFzfvI2JPs6K8K_UwjPSMlex16q3ZG1pifSPPnfd34Ox4FFsYuV9FQx1Elbn_uu_/pub?gid=1716060324&single=true&output=csv">
+  <p class="tw-status">loading…</p>
+</div>
+
+<style>
+  .tw-feed {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 580px;
+    height: 70vh;
+    max-height: 720px;
+    margin: 0 auto;
+    padding: 0 14px;
+    overflow-y: auto;
+    border: 0px solid #000;
+    background: #fff;
+    color: #000;
+    font-family: "Times New Roman", Times, serif;
+    scrollbar-width: thin;
+    scrollbar-color: #000 #fff;
+  }
+  .tw-feed::-webkit-scrollbar { width: 5px; }
+  .tw-feed::-webkit-scrollbar-track { background: #fff; }
+  .tw-feed::-webkit-scrollbar-thumb { background: #000; }
+
+  .tw-item { padding: 14px 0; }
+  .tw-item + .tw-item { border-top: 0px solid #000; }
+  .tw-item .twitter-tweet { margin: 0 auto !important; }
+
+  .tw-fallback { color: #000; font-style: italic; }
+  .tw-status { margin: 28px 0; text-align: center; font-style: italic; }
+</style>
+
+<script>
+(function () {
+  var feed = document.querySelector(".tw-feed");
+  var src = feed.getAttribute("data-src");
+
+  function status(msg) {
+    feed.innerHTML = '<p class="tw-status">' + msg + "</p>";
+  }
+
+  function loadWidgets() {
+    return new Promise(function (resolve) {
+      if (window.twttr && window.twttr.widgets) return resolve(window.twttr);
+      var s = document.createElement("script");
+      s.src = "https://platform.twitter.com/widgets.js";
+      s.async = true;
+      s.onload = function () { window.twttr.ready(resolve); };
+      s.onerror = function () { resolve(null); }; // e.g. blocked by an ad blocker
+      document.head.appendChild(s);
+    });
+  }
+
+  fetch(src + (src.indexOf("?") > -1 ? "&" : "?") + "t=" + Date.now())
+    .then(function (r) { if (!r.ok) throw new Error(); return r.text(); })
+    .then(function (text) {
+      var ids = [];
+      text.split(/\r?\n/).forEach(function (line) {
+        var m = line.match(/status(?:es)?\/(\d+)/);
+        if (m) ids.push(m[1]);
+      });
+      if (!ids.length) return status("nothing here yet.");
+
+      feed.innerHTML = "";
+      var items = ids.map(function (id) {
+        var el = document.createElement("div");
+        el.className = "tw-item";
+        var a = document.createElement("a");
+        a.className = "tw-fallback";
+        a.href = "https://x.com/i/status/" + id;
+        a.target = "_blank";
+        a.rel = "noopener";
+        a.textContent = "view post";
+        el.appendChild(a);
+        feed.appendChild(el);
+        return { id: id, el: el, link: a };
+      });
+
+      loadWidgets().then(function (twttr) {
+        if (!twttr) return; // embeds blocked: plain links stay visible
+        items.forEach(function (it) {
+          twttr.widgets.createTweet(it.id, it.el, {
+            theme: "light",
+            align: "center",
+            conversation: "none",
+            dnt: true
+          }).then(function (node) { if (node) it.link.remove(); });
+        });
+      });
+    })
+    .catch(function () { status("couldn't load."); });
+})();
+</script>
+
+                  <!-- <iframe src="https://widgets.sociablekit.com/twitter-feed/iframe/25639654" frameborder="0" width="100%" height="400px"></iframe> -->
                </section>
 
                <!-- isid music widget -->
