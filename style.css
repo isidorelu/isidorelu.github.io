@@ -358,3 +358,25 @@ section {
    float: left;
 }
 
+details.widget > summary {
+   list-style: none;            /* hide the default triangle */
+   cursor: pointer;
+   padding: 10px 0;
+   border-bottom: 1px solid #a2a9b1;
+   font-weight: bold;
+   text-transform: uppercase;
+}
+details.widget > summary::-webkit-details-marker { display: none; } /* Safari */
+
+details.widget > summary::before {
+   content: "▸";
+   display: inline-block;
+   margin-right: 0.5em;
+   transition: transform 0.15s;
+}
+details.widget[open] > summary::before { transform: rotate(90deg); }
+
+/* Desktop: no title bars, everything shown */
+@media (min-width: 480px) {
+   details.widget > summary { display: none; }
+}

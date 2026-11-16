@@ -2,10 +2,11 @@
 <html lang="en">
    <head>
       <meta charset="UTF-8" />
+      <!-- <meta name="viewport" content="width=980"> -->
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta name="description" content="Isidore Lu, a.k.a. isid or, is a pop musician, visual artist, and computer science student based in San Francisco, Pittsburgh, and New York City." />
-      <meta name="keywords" content="Isidore Lu, isid or, pop musician, visual artist, Carnegie Mellon, isid or, music, CMU, computer science, student, CS, New York City, San Francisco, Pittsburgh" />
-      <meta name="author" content="Isidore Lu (isid or)" />
+      <meta name="description" content="Isidore Lu, known as Isid Or, is an American musician, creative director, writer, designer, technologist, and event producer." />
+      <meta name="keywords" content="Isidore Lu, Isid Or, pop musician, artist, creative director, Carnegie Mellon, music, CMU, computer science, CS, New York City, writer, technologist" />
+      <meta name="author" content="Isid Or (Isidore Lu)" />
       <meta name="robots" content="index, follow" />
 
       <title>TLDR / ISIDORELU.COM</title>
@@ -15,7 +16,7 @@
 
       <!-- Open Graph Tags -->
       <meta property="og:title" content="ISIDORELU.COM" />
-      <meta property="og:description" content="pop music & cs." />
+      <meta property="og:description" content="musician writer tech" />
       <meta property="og:image" content="https://isidorelu.com/prof-pic.jpg" />
       <meta property="og:url" content="https://isidorelu.com" />
       <meta property="og:type" content="website" />
@@ -24,7 +25,7 @@
       <!-- Twitter Card Tags -->
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:title" content="ISIDORELU.COM" />
-      <meta name="twitter:description" content="pop music & cs." />
+      <meta name="twitter:description" content="musician writer tech" />
       <meta name="twitter:image" content="https://isidorelu.com/prof-pic.jpg" />
       <meta name="twitter:site" content="@isid__or" />
 
@@ -33,12 +34,413 @@
          {
             "@context": "https://schema.org",
             "@type": "Person",
-            "name": "Isidore Lu",
-            "alternateName": "isid or",
+            "name": "Isid Or",
+            "alternateName": "Isidore Lu",
             "url": "https://isidorelu.com",
-            "sameAs": ["https://instagram.com/isid.or", "https://twitter.com/isid__or", "https://tiktok.com/@isid__or", "https://www.youtube.com/@isid__or", "https://isidcore.substack.com/", "https://www.linkedin.com/in/isidorelu", "https://www.goodreads.com/user/show/184416706-isidore", "https://letterboxd.com/isid__or/", "https://open.spotify.com/user/1224islu", "https://isidbrand.info/", "https://github.com/isidorelu"]
+            "sameAs": ["https://instagram.com/isid.or", "https://www.instagram.com/isidcore/", "https://twitter.com/isid__or", "https://tiktok.com/@isid__or", "https://www.youtube.com/@isid__or", "https://www.youtube.com/@isidcore", "https://isidcore.substack.com/", "https://www.linkedin.com/in/isidorelu", "https://www.goodreads.com/user/show/184416706-isidore", "https://letterboxd.com/isid__or/", "https://open.spotify.com/user/1224islu", "https://studio.isidorelu.com", "https://blog.isidorelu.com", "https://github.com/isidorelu"]
          }
       </script>
+
+      <!-- Wikipedia-style article. Everything is scoped to .wiki so it doesn't touch the rest of style.css. -->
+      <style>
+         .wiki {
+            --link: #3366cc;
+            --link-visited: #795cb2;
+            --text: #202122;
+            --muted: #54595d;
+            --border: #a2a9b1;
+            --border-light: #c8ccd1;
+            --bg-subtle: #f8f9fa;
+            --bg-header: #eaecf0;
+            --infobox-head: #f0e68c;
+            --serif: "Linux Libertine", "Georgia", "Times", serif;
+            --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Lato", "Helvetica", "Arial", sans-serif;
+            font-family: var(--sans);
+            color: var(--text);
+            font-size: 16px;
+            line-height: 1.6;
+            text-align: left;
+            margin: 0 -1rem;
+         }
+         .wiki *,
+         .wiki *::before,
+         .wiki *::after {
+            box-sizing: border-box;
+         }
+         .wiki a {
+            color: var(--link);
+            text-decoration: none;
+         }
+         .wiki a:visited {
+            color: var(--link-visited);
+         }
+         .wiki a:hover {
+            text-decoration: underline;
+         }
+         .wiki h1,
+         .wiki h2,
+         .wiki h3 {
+            font-style: normal;
+         }
+
+         /* Top bar */
+         .wiki .wiki-top {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            height: 56px;
+            padding: 0 24px;
+            max-width: 1596px;
+            margin: 0 auto;
+         }
+         .wiki .menu-btn {
+            width: 32px;
+            height: 32px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 4px;
+            border: 0;
+            background: none;
+            cursor: pointer;
+            padding: 6px;
+         }
+         .wiki .menu-btn span {
+            display: block;
+            height: 2px;
+            background: var(--text);
+            border-radius: 1px;
+         }
+         .wiki .wordmark {
+            font-family: var(--serif);
+            font-size: 1.35rem;
+            letter-spacing: 0.04em;
+            color: var(--text) !important;
+            white-space: nowrap;
+            line-height: 1.2;
+         }
+         .wiki .wordmark small {
+            display: block;
+            font-family: var(--sans);
+            font-size: 0.62rem;
+            letter-spacing: 0.08em;
+            color: var(--muted);
+            margin-top: 0;
+            text-transform: uppercase;
+         }
+         .wiki .search {
+            flex: 1;
+            max-width: 500px;
+            margin-left: 12px;
+         }
+         .wiki .search {
+            position: relative;
+         }
+         .wiki .search input {
+            width: 100%;
+            height: 32px;
+            border: 1px solid var(--border);
+            border-radius: 2px;
+            padding: 0 96px 0 10px;
+            font: inherit;
+            font-size: 0.875rem;
+         }
+         .wiki .find-count {
+            position: absolute;
+            right: 30px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 0.75rem;
+            color: var(--muted);
+            pointer-events: none;
+         }
+         .wiki mark.find-hit {
+            background: #fdf2b3;
+            color: inherit;
+            padding: 0;
+            border-radius: 1px;
+         }
+         .wiki mark.find-hit.current {
+            background: #f8c300;
+         }
+         .wiki .top-links {
+            margin-left: auto;
+            display: flex;
+            gap: 18px;
+            font-size: 0.875rem;
+         }
+         .wiki .top-links a {
+            color: var(--link) !important;
+         }
+
+         /* Layout */
+         .wiki .wiki-page {
+            display: grid;
+            grid-template-columns: 220px minmax(0, 1fr);
+            gap: 0 32px;
+            max-width: 1596px;
+            margin: 0 auto;
+            padding: 0 24px;
+         }
+         .wiki .toc {
+            position: sticky;
+            top: 0;
+            align-self: start;
+            max-height: 100vh;
+            overflow: auto;
+            padding: 22px 0 24px;
+            font-size: 0.875rem;
+         }
+         .wiki .toc-title {
+            font-weight: 700;
+            padding-bottom: 6px;
+            border-bottom: 1px solid var(--border-light);
+            margin-bottom: 8px;
+         }
+         .wiki .toc ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+         }
+         .wiki .toc li {
+            margin: 4px 0;
+            line-height: 1.35;
+         }
+         .wiki .toc a {
+            color: var(--link) !important;
+            display: block;
+         }
+         .wiki .toc a.active {
+            color: var(--text) !important;
+            font-weight: 700;
+         }
+
+         .wiki .wiki-main {
+            min-width: 0;
+            padding-bottom: 48px;
+         }
+         .wiki-loading .wiki-main {
+            visibility: hidden;
+         }
+         .wiki .title-row {
+            border-bottom: 1px solid var(--border);
+            padding-top: 18px;
+         }
+         .wiki h1 {
+            font-family: var(--serif);
+            font-weight: 400;
+            font-size: 1.8rem;
+            line-height: 1.375;
+            margin: 0 0 4px;
+         }
+         .wiki .tabs {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.875rem;
+            border-bottom: 1px solid var(--border-light);
+            margin-bottom: 6px;
+         }
+         .wiki .tabs div {
+            display: flex;
+            gap: 16px;
+         }
+         .wiki .tabs a {
+            padding: 8px 2px 6px;
+            color: var(--link) !important;
+         }
+         .wiki .tabs a.selected {
+            color: var(--text) !important;
+            border-bottom: 2px solid var(--text);
+         }
+         .wiki .tagline {
+            font-size: 0.8rem;
+            color: var(--muted);
+            margin: 6px 0 18px;
+         }
+
+         .wiki .content {
+            font-size: 1rem;
+            max-width: 1000px;
+         }
+         .wiki .content p {
+            margin: 0.5em 0 1em;
+         }
+         .wiki h2 {
+            font-family: var(--serif);
+            font-weight: 400;
+            font-size: 1.5rem;
+            line-height: 1.375;
+            margin: 1.2em 0 0.4em;
+            padding-bottom: 2px;
+            border-bottom: 1px solid var(--border);
+            overflow: hidden;
+            scroll-margin-top: 16px;
+         }
+         .wiki sup.reference {
+            font-size: 0.75em;
+            line-height: 1;
+            white-space: nowrap;
+            font-weight: 400;
+         }
+         .wiki sup.reference a {
+            color: var(--link) !important;
+         }
+
+         /* Infobox */
+         .wiki .infobox {
+            float: right;
+            clear: right;
+            width: 300px;
+            margin: 0 0 16px 24px;
+            border: 1px solid var(--border);
+            background: var(--bg-subtle);
+            font-size: 0.875rem;
+            line-height: 1.5;
+            border-collapse: collapse;
+         }
+         .wiki .infobox th,
+         .wiki .infobox td {
+            padding: 3px 8px;
+            vertical-align: top;
+            text-align: left;
+         }
+         .wiki .infobox .ib-title {
+            font-size: 1.25rem;
+            text-align: center;
+            font-weight: 700;
+            padding: 8px;
+         }
+         .wiki .infobox .ib-head {
+            background: var(--infobox-head);
+            text-align: center;
+            font-weight: 700;
+         }
+         .wiki .infobox th[scope="row"] {
+            width: 36%;
+            font-weight: 700;
+         }
+         .wiki .infobox .ib-image {
+            text-align: center;
+            padding: 4px 8px 8px;
+         }
+         .wiki .portrait {
+            display: block;
+            width: 100%;
+            aspect-ratio: 4 / 5;
+            object-fit: cover;
+            object-position: 50% 25%;
+            border: 1px solid var(--border-light);
+            background: #eaecf0;
+         }
+         .wiki .ib-caption {
+            font-size: 0.8rem;
+            color: var(--text);
+            padding-top: 4px;
+         }
+
+         .wiki ul.plain {
+            margin: 0.3em 0 1em 1.4em;
+            padding: 0;
+         }
+         .wiki ul.plain li {
+            margin: 0.2em 0;
+         }
+
+         /* References */
+         .wiki ol.references {
+            font-size: 0.875rem;
+            padding-left: 2em;
+            margin: 0.5em 0 1em;
+         }
+         .wiki ol.references li {
+            margin: 0.25em 0;
+            scroll-margin-top: 16px;
+         }
+         .wiki ol.references li:target {
+            background: #eaf3ff;
+         }
+         .wiki .caret {
+            font-weight: 700;
+            color: var(--link);
+            margin-right: 4px;
+         }
+
+         /* Categories & page footer */
+         .wiki .catlinks {
+            clear: both;
+            border: 1px solid var(--border);
+            background: var(--bg-subtle);
+            padding: 6px 10px;
+            margin-top: 24px;
+            font-size: 0.875rem;
+         }
+         .wiki .catlinks ul {
+            display: inline;
+            margin: 0;
+            padding: 0;
+         }
+         .wiki .catlinks li {
+            display: inline;
+            padding: 0 0.5em;
+            border-left: 1px solid var(--border-light);
+         }
+         .wiki .catlinks li:first-child {
+            border-left: 0;
+         }
+         .wiki .wiki-foot {
+            font-size: 0.75rem;
+            color: var(--muted);
+            padding: 16px 0 32px;
+            border-top: 1px solid var(--border-light);
+            margin-top: 24px;
+         }
+         .wiki .wiki-foot p {
+            margin: 0.3em 0;
+         }
+         .wiki .wiki-foot a {
+            margin-right: 12px;
+         }
+
+         @media (max-width: 1000px) {
+            .wiki .wiki-page {
+               grid-template-columns: 1fr;
+               padding: 0 16px;
+            }
+            .wiki .toc {
+               display: none;
+            }
+            .wiki .search,
+            .wiki .top-links {
+               display: none;
+            }
+            .wiki .wiki-top {
+               padding: 0 16px;
+            }
+         }
+         @media (max-width: 640px) {
+            .wiki .infobox {
+               float: none;
+               width: 100%;
+               margin: 0 0 16px;
+            }
+            .wiki h1 {
+               font-size: 1.6rem;
+            }
+            .wiki .content {
+               display: flex;
+               flex-direction: column;
+            }
+            .wiki #wiki-body {
+               display: contents;
+            }
+            .wiki #wiki-body > p:first-child {
+               order: -2;
+            }
+            .wiki #wiki-infobox {
+               order: -1;
+            }
+         }
+      </style>
    </head>
 
    <body>
@@ -52,7 +454,7 @@
                </div>
                <script src="clock.js"></script>
                <header>
-                  <h1>ISIDORE LU • 魯裕源 • ルーイジドール</h1>
+                  <h1>ISID OR • 魯裕源 • ルーイジドール</h1>
                </header>
             </div>
          </div>
@@ -67,112 +469,216 @@
 
          <div class="row">
             <div class="col">
-               <section class="profile-picture">
-                  <img src="header_selfie.jpg" alt="isid or selfie" style="max-width: 18em; height: auto; margin: 0.2em" />
-               </section>
+               <!--
+                  ABOUT PAGE (Wikipedia-style). Text comes from the About Google Sheet.
+                  Paste each tab's published CSV link below (File → Share → Publish to web → choose the tab → CSV).
+                  Everything written inside this block is a copy of the sheet for search engines; it also shows
+                  if the sheet can't be reached. To refresh it, open about.html?export and paste the result over this block.
+               -->
+               <div class="wiki" id="wiki" data-page="https://docs.google.com/spreadsheets/d/e/2PACX-1vSEnITcAtyiosLpokK9JMnqbgmnPJNrQknObXskddUGZ-2j4ZWOR5eetD4Hgiy-l-rlxVndDYCDhibn/pub?gid=205773574&amp;single=true&amp;output=csv" data-infobox="https://docs.google.com/spreadsheets/d/e/2PACX-1vSEnITcAtyiosLpokK9JMnqbgmnPJNrQknObXskddUGZ-2j4ZWOR5eetD4Hgiy-l-rlxVndDYCDhibn/pub?gid=914036840&amp;single=true&amp;output=csv" data-article="https://docs.google.com/spreadsheets/d/e/2PACX-1vSEnITcAtyiosLpokK9JMnqbgmnPJNrQknObXskddUGZ-2j4ZWOR5eetD4Hgiy-l-rlxVndDYCDhibn/pub?gid=1852072097&amp;single=true&amp;output=csv" data-references="https://docs.google.com/spreadsheets/d/e/2PACX-1vSEnITcAtyiosLpokK9JMnqbgmnPJNrQknObXskddUGZ-2j4ZWOR5eetD4Hgiy-l-rlxVndDYCDhibn/pub?gid=218482315&amp;single=true&amp;output=csv">
+                  <div class="wiki-top">
+                     <button class="menu-btn" aria-label="Main menu"><span></span><span></span><span></span></button>
+                     <a class="wordmark" href="https://isidorelu.com">ISIDORELU.COM<small>Studio · Blog · Store</small></a>
+                     <div class="search"><input type="search" placeholder="Search this page" aria-label="Search this page" /><span class="find-count" aria-live="polite"></span></div>
+                     <div class="top-links">
+                        <a href="https://studio.isidorelu.com">Studio</a>
+                        <a href="https://blog.isidorelu.com">Blog</a>
+                        <a href="https://store.isidorelu.com">Store</a>
+                     </div>
+                  </div>
+                  <div class="wiki-page">
+                     <aside class="toc" aria-label="Contents">
+                        <div class="toc-title">Contents</div>
+                        <ul id="wiki-toc">
+                           <li><a href="#top">(Top)</a></li>
+                           <li><a href="#education">Education</a></li>
+                           <li><a href="#work-and-career">Work and career</a></li>
+                           <li><a href="#artistry">Artistry</a></li>
+                           <li><a href="#selected-work">Selected work</a></li>
+                           <li><a href="#references">References</a></li>
+                        </ul>
+                     </aside>
+                     <div class="wiki-main" id="top">
+                        <div class="title-row"><h1 id="wiki-title">Isid Or</h1></div>
+                        <div class="tabs">
+                           <div><a class="selected" href="#top">Article</a><a href="#references">Sources</a></div>
+                           <div><a class="selected" href="#top">Read</a><a href="https://studio.isidorelu.com">Studio</a><a href="https://blog.isidorelu.com">Blog</a></div>
+                        </div>
+                        <div class="tagline" id="wiki-tagline">From ISIDORELU.COM &nbsp;·&nbsp; American musician (born 2004)</div>
+                        <div class="content">
+                           <table class="infobox" id="wiki-infobox" aria-label="Isid Or">
+                              <tbody>
+                                 <tr>
+                                    <th colspan="2" class="ib-title">Isid Or</th>
+                                 </tr>
+                                 <tr>
+                                    <td colspan="2" class="ib-image">
+                                       <img class="portrait" src="about_photo.jpg" alt="Isid Or in 2026" loading="eager" />
+                                       <div class="ib-caption">Isid Or in 2026</div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <th colspan="2" class="ib-head">Background information</th>
+                                 </tr>
+                                 <tr>
+                                    <th scope="row">Birth name</th>
+                                    <td>Isidore Lu</td>
+                                 </tr>
+                                 <tr>
+                                    <th scope="row">Born</th>
+                                    <td>2004<br /><a href="https://en.wikipedia.org/wiki/San_Francisco">San Francisco</a>, California, U.S.</td>
+                                 </tr>
+                                 <tr>
+                                    <th scope="row">Education</th>
+                                    <td><a href="https://en.wikipedia.org/wiki/Carnegie_Mellon_University">Carnegie Mellon University</a></td>
+                                 </tr>
+                                 <tr>
+                                    <th scope="row">Genres</th>
+                                    <td><a href="https://en.wikipedia.org/wiki/Electropop">Electropop</a><br /><a href="https://en.wikipedia.org/wiki/Hyperpop">Hyperpop</a><br /><a href="https://en.wikipedia.org/wiki/J-pop">J-pop</a></td>
+                                 </tr>
+                                 <tr>
+                                    <th scope="row">Occupations</th>
+                                    <td>Musician<br />Creative director<br />Writer<br />Designer<br />Technologist<br />Event producer</td>
+                                 </tr>
+                                 <tr>
+                                    <th scope="row">Instruments</th>
+                                    <td>Vocals<br />Synthesizer<br />Cello</td>
+                                 </tr>
+                                 <tr>
+                                    <th scope="row">Years active</th>
+                                    <td>2022–present</td>
+                                 </tr>
+                                 <tr>
+                                    <th scope="row">Label</th>
+                                    <td>Independent (isid music)</td>
+                                 </tr>
+                                 <tr>
+                                    <th scope="row">Website</th>
+                                    <td><a href="https://isidorelu.com">isidorelu.com</a></td>
+                                 </tr>
+                              </tbody>
+                           </table>
 
-               <section class="blurb">
-                  <p>
-                     <strong>ISIDORE LU</strong> is a <strong><em>pop musician</em></strong
-                     >, <strong><em>visual artist</em></strong
-                     >, & <strong><em>computer science student</em></strong
-                     >.<br />Currently pursuing a
-                     <strong>B.S. in MUSIC & TECHNOLOGY (Computer Science Focus)</strong>
-                     @ <strong>Carnegie Mellon</strong><br />with minors in <em>Business Administration</em> + Literature & Culture.<br /><br />Based in <strong>San Francisco</strong>, <strong>Pittsburgh</strong>, and <strong>New York City</strong>. <br /><br />
-                  </p>
-               </section>
+                           <div id="wiki-body">
+                              <p>
+                                 <b>Isidore Lu</b>, known as <b>Isid Or</b>, (born 2004) is an American musician, creative director, writer, designer, technologist, and event producer. His work blends experimental electronic music with commercial pop, drawing on the <a href="https://en.wikipedia.org/wiki/Hyperpop">hyperpop</a> scene of the early 2020s and on Japanese and Korean <a href="https://en.wikipedia.org/wiki/Idol_(Japan)">idol</a> pop, and extends across music video, visual design, writing, and nightlife.<sup class="reference"><a href="#cite-note-1">[1]</a></sup
+                                 ><sup class="reference"><a href="#cite-note-2">[2]</a></sup>
+                              </p>
+                              <p>
+                                 Isid Or released the Japanese-language mini-album <a href="https://isidorelu.com/love"><i>Sincerely, Mr. Love &amp; Pop</i></a> in 2026, alongside a self-financed music video for "<a href="https://www.youtube.com/watch?v=FJRkCm_5sII">Everything</a>," <a href="https://store.isidorelu.com">merchandise lines</a>, and a series of events in <a href="https://en.wikipedia.org/wiki/New_York_City">New York City</a> under his creative studio, <a href="https://studio.isidorelu.com">ISIDORELU.COM</a>.<sup class="reference"><a href="#cite-note-3">[3]</a></sup
+                                 ><sup class="reference"><a href="#cite-note-4">[4]</a></sup
+                                 ><sup class="reference"><a href="#cite-note-5">[5]</a></sup
+                                 ><sup class="reference"><a href="#cite-note-6">[6]</a></sup> He also writes essays on music, media, and culture.<sup class="reference"><a href="#cite-note-7">[7]</a></sup
+                                 ><sup class="reference"><a href="#cite-note-8">[8]</a></sup>
+                              </p>
+                              <h2 id="education">Education</h2>
+                              <p>
+                                 Isid Or was born and raised in <a href="https://en.wikipedia.org/wiki/San_Francisco">San Francisco</a>, and spent a year and a half in <a href="https://en.wikipedia.org/wiki/Tokyo">Tokyo</a> as a young child, attending kindergarten there. He is <a href="https://en.wikipedia.org/wiki/Taiwanese_Americans">Taiwanese-American</a> and grew up speaking English and <a href="https://en.wikipedia.org/wiki/Mandarin_Chinese">Mandarin</a> at home.<sup class="reference"><a href="#cite-note-3">[3]</a></sup> From age eight to 16 he trained in ballet and contemporary dance at the <a href="https://en.wikipedia.org/wiki/San_Francisco_Ballet">San Francisco Ballet School</a>, on a full scholarship, and at <a href="https://en.wikipedia.org/wiki/ODC/Dance">ODC</a>.<sup class="reference"><a href="#cite-note-8">[8]</a></sup> He also played the cello and worked in theatre at <a href="https://en.wikipedia.org/wiki/Lowell_High_School_(San_Francisco)">Lowell High School</a>, where his senior quote was <a href="https://en.wikipedia.org/wiki/Sophie_(musician)">SOPHIE</a>'s lyric "I could be anything I want."<sup class="reference"><a href="#cite-note-9">[9]</a></sup>
+                              </p>
+                              <p>
+                                 Isid Or studies music and computer science at <a href="https://en.wikipedia.org/wiki/Carnegie_Mellon_University">Carnegie Mellon University</a> and is expected to graduate in 2027.<sup class="reference"><a href="#cite-note-7">[7]</a></sup
+                                 ><sup class="reference"><a href="#cite-note-8">[8]</a></sup> He chose not to transfer into the university's electronic music BFA after taking a course with Freida Abtan, who had earlier taught <a href="https://en.wikipedia.org/wiki/PC_Music">PC Music</a> founder <a href="https://en.wikipedia.org/wiki/A._G._Cook">A. G. Cook</a> at <a href="https://en.wikipedia.org/wiki/Goldsmiths,_University_of_London">Goldsmiths</a>.<sup class="reference"><a href="#cite-note-9">[9]</a></sup> He has since written critically about the university's technical culture,<sup class="reference"><a href="#cite-note-8">[8]</a></sup> and in fall 2026 he began reorienting his studies around his creative work.<sup class="reference"><a href="#cite-note-9">[9]</a></sup>
+                              </p>
+                              <h2 id="work-and-career">Work and career</h2>
+                              <p>
+                                 Isid Or began producing music at 13. He is self-taught as a singer, producer, and engineer, having learned largely through the online hyperpop and URL festival communities on <a href="https://en.wikipedia.org/wiki/Twitter">Twitter</a> during the 2020 lockdown.<sup class="reference"><a href="#cite-note-2">[2]</a></sup
+                                 ><sup class="reference"><a href="#cite-note-4">[4]</a></sup> In 2022, he interned at the New York experimental label <a href="https://unseelie-nyc.bandcamp.com/">unseelie</a>, where he worked on the album campaign for <a href="https://yikii.bandcamp.com/">Yikii</a>'s <a href="https://unseelie.kudosrecords.co.uk/release/unsl021/yikii-the-crow-cyan-lake-"><i>The Crow-Cyan Lake</i></a> and translated its lyrics from Mandarin.<sup class="reference"><a href="#cite-note-9">[9]</a></sup> He began releasing music as <a href="https://open.spotify.com/artist/2WmGGyAuy6VWEmTFnZCUii">Isid Or</a> that same year, and followed with two compilation EPs, <i>Thrill: EP</i> (2023) and <i>Listening To New Songs</i> (2025).<sup class="reference"><a href="#cite-note-9">[9]</a></sup>
+                              </p>
+                              <p>
+                                 In 2025, Isid Or interned at <a href="https://en.wikipedia.org/wiki/Baobab_Studios">Baobab Studios</a> under director <a href="https://en.wikipedia.org/wiki/Eric_Darnell">Eric Darnell</a>, building AI tools. Afterward he turned away from technical work toward an independent creative career.<sup class="reference"><a href="#cite-note-7">[7]</a></sup
+                                 ><sup class="reference"><a href="#cite-note-10">[10]</a></sup> In 2026, he began publishing essays on <a href="https://blog.isidorelu.com">Substack</a> and <a href="https://instagram.com/isidcore">Instagram</a>,<sup class="reference"><a href="#cite-note-7">[7]</a></sup
+                                 ><sup class="reference"><a href="#cite-note-11">[11]</a></sup> appeared as the lead in <a href="https://en.wikipedia.org/wiki/Lolo_Zoua%C3%AF">Lolo Zouaï</a>'s music video "<a href="https://www.youtube.com/watch?v=HtK461D1WPQ">Baggy Jeans</a>,"<sup class="reference"><a href="#cite-note-12">[12]</a></sup> and spent the summer in New York on a budget he set aside from his savings, building ties across the city's creative, nightlife, and publishing scenes.<sup class="reference"><a href="#cite-note-1">[1]</a></sup
+                                 ><sup class="reference"><a href="#cite-note-4">[4]</a></sup>
+                              </p>
+                              <p>
+                                 There he executive produced and creative directed the music video for "<a href="https://www.youtube.com/watch?v=FJRkCm_5sII">Everything</a>," the single from <i>Sincerely, Mr. Love &amp; Pop</i>. He financed it himself and assembled a full cast and crew.<sup class="reference"><a href="#cite-note-3">[3]</a></sup
+                                 ><sup class="reference"><a href="#cite-note-4">[4]</a></sup> He promoted the record with merchandise lines and events under <a href="https://studio.isidorelu.com">ISIDORELU.COM</a>, which included an <a href="https://partiful.com/e/XOMzCXr1bJZIFXmYGU5Y">end-of-summer party</a> in July, co-hosted with <a href="https://www.instagram.com/imblizzymcguire/">Blizzy McGuire</a> and sponsored by <a href="https://www.instagram.com/lifeaftertrance/">Life After Trance</a>,<sup class="reference"><a href="#cite-note-13">[13]</a></sup> and a <a href="https://partiful.com/e/qNws9LNPfzIOxKvSkcl8">J-pop night</a> at <a href="https://en.wikipedia.org/wiki/Kodansha">Kodansha</a> House in <a href="https://en.wikipedia.org/wiki/Hudson_Yards,_Manhattan">Hudson Yards</a> in October.<sup class="reference"><a href="#cite-note-14">[14]</a></sup
+                                 ><sup class="reference"><a href="#cite-note-15">[15]</a></sup> That year, he also worked as audio supervisor and composer for Kodansha House's <a href="https://kodanshahouse.com/">pop-ups</a> in Los Angeles and New York, scoring five immersive activations.<sup class="reference"><a href="#cite-note-5">[5]</a></sup>
+                              </p>
+                              <h2 id="artistry">Artistry</h2>
+                              <p>
+                                 Isid Or approaches his career as a single interdisciplinary work. Alongside music, he directs his own visuals, photography, styling, and video, writes criticism, produces events, and designs and codes his own websites, an approach he attributes to years of working with few outside resources.<sup class="reference"><a href="#cite-note-3">[3]</a></sup
+                                 ><sup class="reference"><a href="#cite-note-9">[9]</a></sup> His work often explores themes of <a href="https://en.wikipedia.org/wiki/Idolatry">idolatry</a>, <a href="https://en.wikipedia.org/wiki/Self-reference">self-reference</a>, idealism, <a href="https://en.wikipedia.org/wiki/Western_canon">canonization</a>, self-mythology, and escapism. He has described building a career as a pop star as itself part of the art, and treats self-actualization as central to his practice. He has described being inspired by the <a href="https://en.wikipedia.org/wiki/New_Journalism">New Journalists</a>.<sup class="reference"><a href="#cite-note-9">[9]</a></sup>
+                              </p>
+                              <p>
+                                 His work treats pop as a sincere art form, an idea he places in a lineage running from <a href="https://en.wikipedia.org/wiki/Andy_Warhol">Andy Warhol</a> through <a href="https://en.wikipedia.org/wiki/Postmodernism">postmodernism</a> to PC Music.<sup class="reference"><a href="#cite-note-8">[8]</a></sup> He describes pop as "a byproduct of art in the context of capitalism" and argues that sincerity and irony are not opposites.<sup class="reference"><a href="#cite-note-3">[3]</a></sup> He has written that his central theme is the tension between the constraints of pop and experimental art that rebels against them, and that he wants to show that freedom can exist within constraint.<sup class="reference"><a href="#cite-note-8">[8]</a></sup> He has also criticized the engineering mindset that equates beauty with rationality.<sup class="reference"><a href="#cite-note-16">[16]</a></sup>
+                              </p>
+                              <p>
+                                 Isid Or has said he "learned music from PC Music and the hyperpop scenes," which he discovered in middle school, and names <a href="https://en.wikipedia.org/wiki/Charli_XCX">Charli xcx</a>'s <a href="https://en.wikipedia.org/wiki/Pop_2"><i>Pop 2</i></a> as his favorite album.<sup class="reference"><a href="#cite-note-1">[1]</a></sup
+                                 ><sup class="reference"><a href="#cite-note-8">[8]</a></sup
+                                 ><sup class="reference"><a href="#cite-note-6">[6]</a></sup> He traces his first memory of pop to watching <a href="https://en.wikipedia.org/wiki/Perfume_(Japanese_band)">Perfume</a> perform "<a href="https://en.wikipedia.org/wiki/One_Room_Disco">One Room Disco</a>" on television in Tokyo at age five.<sup class="reference"><a href="#cite-note-3">[3]</a></sup
+                                 ><sup class="reference"><a href="#cite-note-6">[6]</a></sup> He says he learned presentation and performance from Japanese and Korean idol culture, studying in particular how East Asian faces are presented in commercial culture.<sup class="reference"><a href="#cite-note-1">[1]</a></sup> His other influences include second-generation K-pop groups such as <a href="https://en.wikipedia.org/wiki/Shinee">SHINee</a>, <a href="https://en.wikipedia.org/wiki/Marcel_Proust">Proust</a>, <a href="https://en.wikipedia.org/wiki/Bret_Easton_Ellis">Bret Easton Ellis</a>, <a href="https://en.wikipedia.org/wiki/Yves_Saint_Laurent_(designer)">Yves Saint Laurent</a>, and the queer, Black DJs of <a href="https://en.wikipedia.org/wiki/Bushwick,_Brooklyn">Bushwick</a> nightlife who champion K-pop and J-electropop.<sup class="reference"><a href="#cite-note-1">[1]</a></sup
+                                 ><sup class="reference"><a href="#cite-note-10">[10]</a></sup
+                                 ><sup class="reference"><a href="#cite-note-11">[11]</a></sup>
+                              </p>
+                              <p>
+                                 Isid Or treats each project as a self-assigned study. For years he made sounds only with software synthesizers and recorded through his laptop microphone, and he still mixes on wired Apple earbuds in <a href="https://en.wikipedia.org/wiki/Logic_Pro">Logic Pro</a>. He writes in Japanese, which he says produces angular melodies and gives him a distance that allows for more theatricality.<sup class="reference"><a href="#cite-note-3">[3]</a></sup> He calls <i>Sincerely, Mr. Love &amp; Pop</i> his "technical capstone" in music and plans for his next body of work to serve as a true debut.<sup class="reference"><a href="#cite-note-9">[9]</a></sup>
+                              </p>
+                              <h2 id="selected-work">Selected work</h2>
+                              <ul class="plain">
+                                 <li><i>Thrill: EP</i> (2023), compilation EP</li>
+                                 <li><i>Listening To New Songs</i> (2025), compilation EP and music videos; executive producer, creative director, director, lead, editor, colorist, sound mixer</li>
+                                 <li>Lolo Zouaï, "<a href="https://www.youtube.com/watch?v=HtK461D1WPQ">Baggy Jeans</a>" (2026), music video; lead</li>
+                                 <li>
+                                    <a href="https://isidorelu.com/love"><i>Sincerely, Mr. Love &amp; Pop</i></a> (2026), Japanese-language mini-album, isid music; songwriter, co-producer, mixing and mastering engineer
+                                 </li>
+                                 <li>"<a href="https://www.youtube.com/watch?v=FJRkCm_5sII">Everything</a>" (2026), music video; executive producer, creative director, lead, editor, colorist, sound mixer</li>
+                                 <li><a href="https://kodanshahouse.com/">Kodansha House Los Angeles and New York</a> (2026), five immersive activations; audio supervisor, composer</li>
+                                 <li>
+                                    <a href="https://partiful.com/e/XOMzCXr1bJZIFXmYGU5Y">ISIDCORE: <i>Sincerely, Mr. Love &amp; Pop</i> End-of-Summer Party</a> (July 29, 2026), Beverly's, New York; co-host, producer
+                                 </li>
+                                 <li><a href="https://partiful.com/e/qNws9LNPfzIOxKvSkcl8">ISIDCORE: J-Pop Night @ Kodansha House</a> (October 15, 2026), Hudson Yards, New York; host, programmer</li>
+                                 <li>"<a href="https://store.isidorelu.com/products/early-investor-in-isid-or-t-shirt-black">Early Investor in isid or</a>" T-shirts (2026); designer, producer</li>
+                              </ul>
+                              <p><b>Selected writing</b></p>
+                              <ul class="plain">
+                                 <li>"<a href="https://isidcore.substack.com/p/updates-6-distinguishing-online-mutual">Updates 6: Distinguishing Online Mutual V.S. Friendship V.S. Professional Colleague</a>" (August 2026), essay, <i>BLOG.ISIDORELU.COM</i></li>
+                                 <li>"<a href="https://isidcore.substack.com/p/ten-obscure-hyperpop-mixes-that-pushed">The Music That Shaped My Teens</a>" (May 2026), essay, <i>BLOG.ISIDORELU.COM</i></li>
+                              </ul>
+                              <h2 id="references">References</h2>
+                              <ol class="references">
+                                 <li id="cite-note-1"><span class="caret">^</span>"Interview with Isid Or". <i>Asian Upcoming</i>. Instagram. June 2026. Photographs by Claire Su. <a href="https://www.instagram.com/p/DZ8rjOHgGYp/">instagram.com/p/DZ8rjOHgGYp</a>.</li>
+                                 <li id="cite-note-2"><span class="caret">^</span>Or, Isid (May 13, 2026). "<a href="https://isidcore.substack.com/p/ten-obscure-hyperpop-mixes-that-pushed">The Music That Shaped My Teens</a>". <i>BLOG.ISIDORELU.COM</i>. Substack.</li>
+                                 <li id="cite-note-3"><span class="caret">^</span>Janghoon (October 2026). "Q&amp;A: <i>Sincerely, Mr. Love &amp; Pop</i>". Instagram. Photographs by Claire Su. <a href="https://www.instagram.com/p/Ddzq2oigGyc/">instagram.com/p/Ddzq2oigGyc</a>.</li>
+                                 <li id="cite-note-4"><span class="caret">^</span>Or, Isid (August 9, 2026). "<a href="https://isidcore.substack.com/p/updates-6-distinguishing-online-mutual">Updates 6: Distinguishing Online Mutual V.S. Friendship V.S. Professional Colleague</a>". <i>BLOG.ISIDORELU.COM</i>. Substack.</li>
+                                 <li id="cite-note-5"><span class="caret">^</span>"<a href="https://studio.isidorelu.com">ISIDORELU.COM — Creative Studio</a>". ISIDORELU.COM. November 2026.</li>
+                                 <li id="cite-note-6"><span class="caret">^</span>"<a href="https://music.apple.com/us/artist/isid-or/1632480790">Isid Or</a>". Apple Music. Artist page and Q&amp;A. Retrieved November 11, 2026.</li>
+                                 <li id="cite-note-7"><span class="caret">^</span>Or, Isid (February 3, 2026). "<a href="https://isidcore.substack.com/p/updates-3-what-pursuing-a-career">Updates 3: What Pursuing A Career As An Artist Means To Me</a>". <i>BLOG.ISIDORELU.COM</i>. Substack.</li>
+                                 <li id="cite-note-8"><span class="caret">^</span>Or, Isid (April 2, 2026). "<a href="https://isidcore.substack.com/p/artistry-dies-at-carnegie-mellon">Artistry Dies At Carnegie Mellon University (Unless You're In The School of Drama)</a>". <i>BLOG.ISIDORELU.COM</i>. Substack.</li>
+                                 <li id="cite-note-9"><span class="caret">^</span>"Biography questionnaire". ISIDORELU.COM. November 2026.</li>
+                                 <li id="cite-note-10"><span class="caret">^</span>Or, Isid; Janghoon (December 28, 2025). "<a href="https://isidcore.substack.com/p/making-pop-music-hemingway-prompt">Making Pop Music, Hemingway, Prompt Engineering, Charli xcx, &amp; 2nd Gen Idols</a>". <i>BLOG.ISIDORELU.COM</i>. Substack.</li>
+                                 <li id="cite-note-11"><span class="caret">^</span>Or, Isid (March 2, 2026). "<a href="https://isidcore.substack.com/p/updates-4-why-i-stopped-idolizing">Updates 4: Why I Stopped Idolizing Artists + Contrived Thoughts On Capitalism Being Terrible</a>". <i>BLOG.ISIDORELU.COM</i>. Substack.</li>
+                                 <li id="cite-note-12"><span class="caret">^</span>Lolo Zouaï (April 24, 2026). "<a href="https://www.youtube.com/watch?v=HtK461D1WPQ">Lolo Zouaï – Baggy Jeans (Official Video)</a>". YouTube. Directed by Annika White and Carl Knight.</li>
+                                 <li id="cite-note-13"><span class="caret">^</span>"<a href="https://partiful.com/e/XOMzCXr1bJZIFXmYGU5Y">ISIDCORE: Isid Or's Sincerely, Mr. Love &amp; Pop End-Of-Summer Party</a>". Partiful. July 29, 2026.</li>
+                                 <li id="cite-note-14"><span class="caret">^</span>"<a href="https://partiful.com/e/qNws9LNPfzIOxKvSkcl8">ISIDCORE: J-POP NIGHT @ KODANSHA HOUSE</a>". Partiful. October 15, 2026.</li>
+                                 <li id="cite-note-15"><span class="caret">^</span>"<a href="https://kodanshahouse.com/events/j-pop-night-kodansha-house/">J-POP Night @ Kodansha House</a>". Kodansha House. October 15, 2026.</li>
+                                 <li id="cite-note-16"><span class="caret">^</span>Or, Isid (March 31, 2026). "<a href="https://isidcore.substack.com/p/technically-minded-people-will-never">Technically-Minded People Will Never Have Great Taste &amp; Ethan Hawke Is Awesome</a>". <i>BLOG.ISIDORELU.COM</i>. Substack.</li>
+                              </ol>
+                           </div>
+                           <div class="catlinks">
+                              <b>Categories:</b>
+                              <ul id="wiki-categories">
+                                 <li>2004 births</li>
+                                 <li>Living people</li>
+                                 <li>Musicians from San Francisco</li>
+                                 <li>American electronic musicians</li>
+                                 <li>American pop musicians</li>
+                                 <li>American people of Taiwanese descent</li>
+                                 <li>Carnegie Mellon University alumni</li>
+                                 <li>Hyperpop musicians</li>
+                              </ul>
+                           </div>
+                        </div>
+                        <div class="wiki-foot">
+                           <p id="wiki-edited">This page was last edited on 11 November 2026.</p>
 
-               <section class="blurb">
-                  <p>
-                     <em>In 2025,</em> <strong>ISIDORE</strong> read
-                     <u
-                        ><strong><em>40</em> BOOKS</strong></u
-                     >, watched
-                     <u
-                        ><strong><em>62</em> FILMS</strong></u
-                     >, posted
-                     <strong
-                        ><u><em>11</em> SUBSTACKS</u></strong
-                     >,<br />
-                     completed
-                     <strong
-                        ><u><em>72</em> COURSE UNITS</u></strong
-                     >, posted
-                     <strong
-                        ><u><em>5</em> YOUTUBE VIDEOS</u></strong
-                     >, attended
-                     <strong
-                        ><u><em>45</em> SHOWS/EXHIBITIONS</u></strong
-                     >,<br />
-                     released
-                     <strong
-                        ><u><em>1</em> SONG</u></strong
-                     >, completed
-                     <strong
-                        ><u><em>1</em> INTERNSHIP</u></strong
-                     >, & released
-                     <strong
-                        ><u><em>1</em> MUSIC VIDEO</u></strong
-                     >.
-                     <br />
-                     <br />
-                  </p>
-               </section>
+                           <p>Text and images © Isidore Lu. All rights reserved.</p>
 
-               <section class="links">
-                  <ul>
-                     <li>
-                        <i class="fab fa-instagram"></i> <strong>Instagram:</strong>
-                        <a href="https://instagram.com/isid.or" target="_blank">@isid.or</a>
-                     </li>
-                     <li>
-                        <i class="fab fa-x-twitter"></i> <strong>Twitter/X:</strong>
-                        <a href="https://twitter.com/isid__or" target="_blank">@isid__or</a>
-                     </li>
-                     <li>
-                        <i class="fab fa-tiktok"></i> <strong>TikTok:</strong>
-                        <a href="https://tiktok.com/@isid__or" target="_blank">@isid__or</a>
-                     </li>
-                     <li>
-                        <i class="fab fa-youtube"></i> <strong>YouTube:</strong>
-                        <a href="https://www.youtube.com/@isid__or" target="_blank">Subscribe for video logs</a>
-                     </li>
-                     <li>
-                        <i class="fas fa-envelope-open-text"></i>
-                        <strong>Substack:</strong>
-                        <a href="https://isidcore.substack.com/" target="_blank">isid core ™</a>
-                     </li>
-                     <li>
-                        <i class="fab fa-linkedin"></i> <strong>LinkedIn:</strong>
-                        <a href="https://www.linkedin.com/in/isidorelu" target="_blank">Connect with me</a>
-                     </li>
-                     <li>
-                        <i class="fas fa-file"></i> <strong>Resume/CV:</strong>
-                        <a href="https://drive.google.com/file/d/1gX-gWRFVRoC7YbLLPhWzMf1UtzeLj86j/view?usp=sharing" target="_blank">My resume</a>
-                     </li>
-                     <li>
-                        <i class="fab fa-goodreads"></i> <strong>Goodreads:</strong>
-                        <a href="https://www.goodreads.com/user/show/184416706-isidore" target="_blank">See what I’m reading</a>
-                     </li>
-                     <li>
-                        <i class="fab fa-letterboxd"></i>
-                        <strong>Letterboxd:</strong>
-                        <a href="https://letterboxd.com/isid__or/" target="_blank">Film log</a>
-                     </li>
-                     <li>
-                        <i class="fab fa-spotify"></i> <strong>Spotify:</strong>
-                        <a href="https://open.spotify.com/user/1224islu" target="_blank">Monthly playlists</a>
-                     </li>
-                     <li>
-                        <i class="fas fa-music"></i> <strong>Artist Project:</strong>
-                        <a href="https://isidbrand.info/" target="_blank">Stream isid or</a>
-                     </li>
-                     <li>
-                        <i class="fab fa-github"></i> <strong>GitHub:</strong>
-                        <a href="https://github.com/isidorelu" target="_blank">View this site’s code</a>
-                     </li>
-                  </ul>
-               </section>
+                           <p><a href="https://isidorelu.com">Home</a><a href="https://studio.isidorelu.com">Studio</a><a href="https://blog.isidorelu.com">Blog</a><a href="https://store.isidorelu.com">Store</a></p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
             </div>
          </div>
       </main>
@@ -181,5 +687,495 @@
          <div id="footer-placeholder"></div>
       </footer>
       <script src="load-components.js"></script>
+
+      <script>
+         /* About page — renders the article from the About Google Sheet.
+            Cell formatting: [text](https://…) link · *italic* · **bold** · {key} citation ·
+            blank line = new paragraph · a line starting with "- " = bullet. */
+         (function () {
+            var root = document.getElementById("wiki");
+            if (!root) return;
+            var $ = function (id) {
+               return document.getElementById(id);
+            };
+
+            /* ---------- reading the sheet ---------- */
+            function parseCSV(text) {
+               var rows = [],
+                  row = [],
+                  cell = "",
+                  q = false;
+               for (var i = 0; i < text.length; i++) {
+                  var ch = text[i];
+                  if (q) {
+                     if (ch === '"') {
+                        if (text[i + 1] === '"') {
+                           cell += '"';
+                           i++;
+                        } else q = false;
+                     } else cell += ch;
+                  } else if (ch === '"') q = true;
+                  else if (ch === ",") {
+                     row.push(cell);
+                     cell = "";
+                  } else if (ch === "\n" || ch === "\r") {
+                     if (ch === "\r" && text[i + 1] === "\n") i++;
+                     row.push(cell);
+                     rows.push(row);
+                     row = [];
+                     cell = "";
+                  } else cell += ch;
+               }
+               if (cell !== "" || row.length) {
+                  row.push(cell);
+                  rows.push(row);
+               }
+               return rows;
+            }
+            // Finds the header row (it sits under the sheet's title and instructions)
+            // and returns the rows below it as objects keyed by lowercase header.
+            function records(rows, required) {
+               for (var h = 0; h < rows.length; h++) {
+                  var head = rows[h].map(function (c) {
+                     return c.trim().toUpperCase();
+                  });
+                  if (
+                     required.every(function (r) {
+                        return head.indexOf(r) > -1;
+                     })
+                  ) {
+                     return rows
+                        .slice(h + 1)
+                        .map(function (r) {
+                           var o = {};
+                           head.forEach(function (k, j) {
+                              if (k) o[k.toLowerCase()] = (r[j] || "").replace(/\r/g, "");
+                           });
+                           return o;
+                        })
+                        .map(function (o) {
+                           o.hidden = /^(hidden|hide|true|yes|x)$/i.test((o.hide || "").trim());
+                           return o;
+                        });
+                  }
+               }
+               throw new Error("Headers not found: " + required.join(", "));
+            }
+            function load(name, required) {
+               var url = root.getAttribute("data-" + name) || "";
+               if (!/^https?:/.test(url)) return Promise.reject(new Error("No CSV link for " + name));
+               return fetch(url)
+                  .then(function (r) {
+                     if (!r.ok) throw new Error(name + ": HTTP " + r.status);
+                     return r.text();
+                  })
+                  .then(function (t) {
+                     var all = records(parseCSV(t), required);
+                     if (name === "references") return all; // hidden references are needed to drop their citations
+                     return all.filter(function (o) {
+                        return !o.hidden;
+                     });
+                  });
+            }
+
+            /* ---------- text formatting ---------- */
+            function esc(s) {
+               return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+            }
+            function safeUrl(u) {
+               u = u.trim();
+               var m = u.match(/^https:\/\/drive\.google\.com\/(?:file\/d\/|open\?id=)([\w-]+)/);
+               if (m) u = "https://lh3.googleusercontent.com/d/" + m[1];
+               return /^[a-z][a-z0-9+.-]*:/i.test(u) && !/^(https?|mailto):/i.test(u) ? null : u;
+            }
+            function emph(s) {
+               return s.replace(/\*\*(.+?)\*\*/g, "<b>$1</b>").replace(/\*(.+?)\*/g, "<i>$1</i>");
+            }
+            var LINK = /\[([^\]]+)\]\(((?:[^()\s]|\([^()\s]*\))+)\)/g;
+            function inline(s, cite) {
+               var keep = [];
+               var hold = function (html) {
+                  keep.push(html);
+                  return "\u0001" + (keep.length - 1) + "\u0002";
+               };
+               s = esc(s.trim());
+               s = s.replace(LINK, function (m, text, url) {
+                  var u = safeUrl(url);
+                  return u === null ? m : hold('<a href="' + u + '">' + emph(text) + "</a>");
+               });
+               if (cite)
+                  s = s.replace(/\{([\w.-]+)\}/g, function (m, key) {
+                     var html = cite(key);
+                     return html === undefined ? m : hold(html);
+                  });
+               return emph(s).replace(/\u0001(\d+)\u0002/g, function (m, i) {
+                  return keep[i];
+               });
+            }
+            function blocks(text, cite) {
+               return text
+                  .split(/\n\s*\n/)
+                  .map(function (b) {
+                     var out = "",
+                        para = [],
+                        list = [];
+                     function flushP() {
+                        if (para.length)
+                           out +=
+                              "<p>" +
+                              para
+                                 .map(function (l) {
+                                    return inline(l, cite);
+                                 })
+                                 .join("<br>") +
+                              "</p>";
+                        para = [];
+                     }
+                     function flushL() {
+                        if (list.length)
+                           out +=
+                              '<ul class="plain">' +
+                              list
+                                 .map(function (l) {
+                                    return "<li>" + inline(l, cite) + "</li>";
+                                 })
+                                 .join("") +
+                              "</ul>";
+                        list = [];
+                     }
+                     b.split("\n").forEach(function (l) {
+                        if (!l.trim()) return;
+                        var m = l.match(/^\s*[-•]\s+(.*)$/);
+                        if (m) {
+                           flushP();
+                           list.push(m[1]);
+                        } else {
+                           flushL();
+                           para.push(l);
+                        }
+                     });
+                     flushP();
+                     flushL();
+                     return out;
+                  })
+                  .join("");
+            }
+            function lines(text, cite) {
+               return text
+                  .split("\n")
+                  .filter(function (l) {
+                     return l.trim();
+                  })
+                  .map(function (l) {
+                     return inline(l, cite);
+                  })
+                  .join("<br>");
+            }
+            function slug(s) {
+               return (
+                  s
+                     .toLowerCase()
+                     .replace(/[^\w\s-]/g, "")
+                     .trim()
+                     .replace(/\s+/g, "-") || "section"
+               );
+            }
+
+            /* ---------- citations: numbered in order of first use ---------- */
+            function citer(refs) {
+               var byKey = {},
+                  order = [];
+               var hiddenKeys = {};
+               refs.forEach(function (r) {
+                  var k = (r.key || "").trim();
+                  if (k && r.hidden) hiddenKeys[k] = 1;
+                  else if (k) byKey[k] = r;
+               });
+               function cite(key) {
+                  if (hiddenKeys[key] && !byKey[key]) return ""; // hidden reference: drop the citation
+                  if (!byKey[key]) return undefined; // unknown key: leave {key} visible so it's noticed
+                  var n = order.indexOf(key) + 1;
+                  if (!n) {
+                     order.push(key);
+                     n = order.length;
+                  }
+                  return '<sup class="reference"><a href="#cite-note-' + n + '">[' + n + "]</a></sup>";
+               }
+               function list() {
+                  Object.keys(byKey).forEach(function (k) {
+                     if (order.indexOf(k) < 0) order.push(k);
+                  });
+                  return order
+                     .map(function (k, i) {
+                        return '<li id="cite-note-' + (i + 1) + '"><span class="caret">^</span>' + inline(byKey[k].citation || "") + "</li>";
+                     })
+                     .join("");
+               }
+               return { cite: cite, list: list };
+            }
+
+            /* ---------- rendering ---------- */
+            function renderPage(rows) {
+               var s = {};
+               rows.forEach(function (r) {
+                  s[(r.setting || "").trim().toLowerCase()] = r.value || "";
+               });
+               if ("title" in s) $("wiki-title").innerHTML = inline(s.title);
+               if ("subtitle" in s) $("wiki-tagline").innerHTML = inline(s.subtitle).replace(/ · /g, " &nbsp;·&nbsp; ");
+               if ("categories" in s)
+                  $("wiki-categories").innerHTML = s.categories
+                     .split("\n")
+                     .filter(function (c) {
+                        return c.trim();
+                     })
+                     .map(function (c) {
+                        return "<li>" + inline(c) + "</li>";
+                     })
+                     .join("");
+               if ("last edited" in s) {
+                  var e = s["last edited"].trim();
+                  $("wiki-edited").innerHTML = /^this page/i.test(e) ? inline(e) : "This page was last edited on " + inline(e.replace(/\.$/, "")) + ".";
+               }
+            }
+            function renderInfobox(rows, cite) {
+               var html = "",
+                  title = "";
+               rows.forEach(function (r) {
+                  var type = (r.type || "").trim().toLowerCase(),
+                     label = r.label || "",
+                     value = r.value || "";
+                  if (type === "title") {
+                     title = (value || label).trim();
+                     html += '<tr><th colspan="2" class="ib-title">' + inline(value || label, cite) + "</th></tr>";
+                  } else if (type === "heading") {
+                     html += '<tr><th colspan="2" class="ib-head">' + inline(value || label, cite) + "</th></tr>";
+                  } else if (type === "image") {
+                     var src = safeUrl(value);
+                     if (!src) return;
+                     var alt = label
+                        .replace(/\[([^\]]+)\]\([^)]*\)/g, "$1")
+                        .replace(/[*{}]/g, "")
+                        .trim();
+                     html += '<tr><td colspan="2" class="ib-image"><img class="portrait" src="' + esc(src) + '" alt="' + esc(alt) + '" loading="eager">' + (label.trim() ? '<div class="ib-caption">' + inline(label, cite) + "</div>" : "") + "</td></tr>";
+                  } else if (label.trim() || value.trim()) {
+                     html += '<tr><th scope="row">' + inline(label, cite) + "</th><td>" + lines(value, cite) + "</td></tr>";
+                  }
+               });
+               var box = $("wiki-infobox");
+               box.innerHTML = html;
+               box.setAttribute("aria-label", title || "Infobox");
+               box.style.display = html ? "" : "none";
+            }
+            function renderArticle(rows, refs) {
+               var html = "",
+                  toc = '<li><a href="#top">(Top)</a></li>',
+                  used = {};
+               rows.forEach(function (r) {
+                  var name = (r.section || "").trim(),
+                     text = r.text || "";
+                  if (!name && !text.trim()) return;
+                  if (name) {
+                     var id = slug(name),
+                        n = 2;
+                     while (used[id]) id = slug(name) + "-" + n++;
+                     used[id] = 1;
+                     html += '<h2 id="' + id + '">' + inline(name) + "</h2>";
+                     toc += '<li><a href="#' + id + '">' + inline(name) + "</a></li>";
+                  }
+                  html += blocks(text, refs.cite);
+               });
+               var list = refs.list();
+               if (list) {
+                  html += '<h2 id="references">References</h2><ol class="references">' + list + "</ol>";
+                  toc += '<li><a href="#references">References</a></li>';
+               }
+               $("wiki-body").innerHTML = html;
+               $("wiki-toc").innerHTML = toc;
+            }
+
+            /* ---------- contents sidebar: highlight the current section ---------- */
+            var observer;
+            function watchToc() {
+               if (!("IntersectionObserver" in window)) return;
+               if (observer) observer.disconnect();
+               var links = [].slice.call(root.querySelectorAll(".toc a")),
+                  map = {};
+               links.forEach(function (a) {
+                  map[a.getAttribute("href").slice(1)] = a;
+               });
+               observer = new IntersectionObserver(
+                  function (entries) {
+                     entries.forEach(function (e) {
+                        if (e.isIntersecting && e.target.id !== "top") {
+                           links.forEach(function (l) {
+                              l.classList.remove("active");
+                           });
+                           map[e.target.id].classList.add("active");
+                        }
+                     });
+                  },
+                  { rootMargin: "0px 0px -75% 0px" }
+               );
+               Object.keys(map).forEach(function (id) {
+                  var t = $(id);
+                  if (t) observer.observe(t);
+               });
+            }
+
+            /* ---------- search bar: find on this page ----------
+               Type to highlight every match. Enter = next, Shift+Enter = previous, Esc = clear. */
+            var find = (function () {
+               var input = root.querySelector(".search input"),
+                  count = root.querySelector(".find-count");
+               var area = root.querySelector(".wiki-main");
+               if (!input || !area) return { refresh: function () {} };
+               var hits = [],
+                  cur = -1,
+                  timer;
+               function clear() {
+                  [].forEach.call(area.querySelectorAll("mark.find-hit"), function (m) {
+                     var p = m.parentNode;
+                     p.replaceChild(document.createTextNode(m.textContent), m);
+                     p.normalize();
+                  });
+                  hits = [];
+                  cur = -1;
+                  count.textContent = "";
+               }
+               function go(i, scroll) {
+                  if (!hits.length) return;
+                  if (cur > -1) hits[cur].classList.remove("current");
+                  cur = (i + hits.length) % hits.length;
+                  hits[cur].classList.add("current");
+                  count.textContent = cur + 1 + " of " + hits.length;
+                  if (scroll !== false) hits[cur].scrollIntoView({ block: "center" });
+               }
+               function run(scroll) {
+                  clear();
+                  var q = input.value.trim().toLowerCase();
+                  if (!q) return;
+                  var walk = document.createTreeWalker(area, NodeFilter.SHOW_TEXT, null),
+                     found = [],
+                     n;
+                  while ((n = walk.nextNode())) if (n.nodeValue.toLowerCase().indexOf(q) > -1) found.push(n);
+                  found.forEach(function (node) {
+                     var text = node.nodeValue,
+                        lower = text.toLowerCase(),
+                        i = 0,
+                        k;
+                     var frag = document.createDocumentFragment();
+                     while ((k = lower.indexOf(q, i)) > -1) {
+                        frag.appendChild(document.createTextNode(text.slice(i, k)));
+                        var m = document.createElement("mark");
+                        m.className = "find-hit";
+                        m.textContent = text.slice(k, k + q.length);
+                        frag.appendChild(m);
+                        hits.push(m);
+                        i = k + q.length;
+                     }
+                     frag.appendChild(document.createTextNode(text.slice(i)));
+                     node.parentNode.replaceChild(frag, node);
+                  });
+                  if (hits.length) go(0, scroll);
+                  else count.textContent = "No results";
+               }
+               input.addEventListener("input", function () {
+                  clearTimeout(timer);
+                  timer = setTimeout(run, 200);
+               });
+               input.addEventListener("keydown", function (e) {
+                  if (e.key === "Enter") {
+                     e.preventDefault();
+                     clearTimeout(timer);
+                     if (cur < 0) run();
+                     else go(cur + (e.shiftKey ? -1 : 1));
+                  } else if (e.key === "Escape") {
+                     input.value = "";
+                     clear();
+                  }
+               });
+               // after the sheet loads and replaces the text, highlight again without jumping
+               return {
+                  refresh: function () {
+                     if (input.value.trim()) run(false);
+                  },
+               };
+            })();
+
+            /* ---------- go ---------- */
+            root.classList.add("wiki-loading");
+            var reveal = function () {
+               root.classList.remove("wiki-loading");
+            };
+            var timer = setTimeout(reveal, 4000); // never stay hidden for long
+
+            var page = load("page", ["SETTING", "VALUE"]).then(renderPage, function (e) {
+               console.warn("[about]", e.message);
+            });
+            var refsP = load("references", ["KEY", "CITATION"]);
+            var infoP = load("infobox", ["TYPE", "LABEL", "VALUE"]);
+            var artP = load("article", ["SECTION", "TEXT"]);
+            infoP.catch(function () {});
+            artP.catch(function () {}); // reported below if they matter
+            var body = refsP
+               .then(function (refs) {
+                  var r = citer(refs);
+                  // The infobox is cited first (it comes first on the page), then the article.
+                  return infoP
+                     .then(
+                        function (rows) {
+                           renderInfobox(rows, r.cite);
+                        },
+                        function (e) {
+                           console.warn("[about]", e.message);
+                        }
+                     )
+                     .then(function () {
+                        return artP;
+                     })
+                     .then(function (rows) {
+                        renderArticle(rows, r);
+                     });
+               })
+               .catch(function (e) {
+                  console.warn("[about] keeping the built-in copy:", e.message);
+               });
+
+            Promise.all([page, body]).then(function () {
+               clearTimeout(timer);
+               reveal();
+               watchToc();
+               find.refresh();
+               if (location.hash) {
+                  var t = $(location.hash.slice(1));
+                  if (t) t.scrollIntoView();
+               }
+               if (/[?&]export\b/.test(location.search)) showExport();
+            });
+            watchToc();
+
+            // about.html?export → shows the rendered block so you can paste it into about.html as the search-engine copy
+            function showExport() {
+               var copy = root.cloneNode(true);
+               copy.classList.remove("wiki-loading");
+               [].forEach.call(copy.querySelectorAll("mark.find-hit"), function (m) {
+                  m.outerHTML = m.innerHTML;
+               });
+               var c = copy.querySelector(".find-count");
+               if (c) c.textContent = "";
+               var s = copy.querySelector(".search input");
+               if (s) s.removeAttribute("value");
+               [].forEach.call(copy.querySelectorAll(".active"), function (a) {
+                  a.classList.remove("active");
+               });
+               var box = document.createElement("textarea");
+               box.value = copy.outerHTML.replace(/ class=""/g, "");
+               box.style.cssText = "width:100%;height:40vh;font:12px monospace;margin:1em 0";
+               box.readOnly = true;
+               root.parentNode.insertBefore(box, root);
+               box.select();
+            }
+         })();
+      </script>
    </body>
 </html>
