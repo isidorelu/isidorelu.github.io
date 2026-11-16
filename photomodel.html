@@ -2,10 +2,11 @@
 <html lang="en">
    <head>
       <meta charset="UTF-8" />
+      <!-- <meta name="viewport" content="width=980"> -->
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta name="description" content="Isidore Lu, a.k.a. isid or, is a pop musician, visual artist, and computer science student based in San Francisco, Pittsburgh, and New York City." />
-      <meta name="keywords" content="Isidore Lu, isid or, pop musician, visual artist, Carnegie Mellon, isid or, music, CMU, computer science, student, CS, New York City, San Francisco, Pittsburgh" />
-      <meta name="author" content="Isidore Lu (isid or)" />
+      <meta name="description" content="Isidore Lu, known as Isid Or, is an American musician, creative director, writer, designer, technologist, and event producer." />
+      <meta name="keywords" content="Isidore Lu, Isid Or, pop musician, artist, creative director, Carnegie Mellon, music, CMU, computer science, CS, New York City, writer, technologist" />
+      <meta name="author" content="Isid Or (Isidore Lu)" />
       <meta name="robots" content="index, follow" />
 
       <title>PHOTO & MODEL / ISIDORELU.COM</title>
@@ -15,7 +16,7 @@
 
       <!-- Open Graph Tags -->
       <meta property="og:title" content="ISIDORELU.COM" />
-      <meta property="og:description" content="pop music & cs." />
+      <meta property="og:description" content="musician writer tech" />
       <meta property="og:image" content="https://isidorelu.com/prof-pic.jpg" />
       <meta property="og:url" content="https://isidorelu.com" />
       <meta property="og:type" content="website" />
@@ -24,7 +25,7 @@
       <!-- Twitter Card Tags -->
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:title" content="ISIDORELU.COM" />
-      <meta name="twitter:description" content="pop music & cs." />
+      <meta name="twitter:description" content="musician writer tech" />
       <meta name="twitter:image" content="https://isidorelu.com/prof-pic.jpg" />
       <meta name="twitter:site" content="@isid__or" />
 
@@ -33,12 +34,24 @@
          {
             "@context": "https://schema.org",
             "@type": "Person",
-            "name": "Isidore Lu",
-            "alternateName": "isid or",
+            "name": "Isid Or",
+            "alternateName": "Isidore Lu",
             "url": "https://isidorelu.com",
-            "sameAs": ["https://instagram.com/isid.or", "https://twitter.com/isid__or", "https://tiktok.com/@isid__or", "https://www.youtube.com/@isid__or", "https://isidcore.substack.com/", "https://www.linkedin.com/in/isidorelu", "https://www.goodreads.com/user/show/184416706-isidore", "https://letterboxd.com/isid__or/", "https://open.spotify.com/user/1224islu", "https://isidbrand.info/", "https://github.com/isidorelu"]
+            "sameAs": ["https://instagram.com/isid.or", "https://www.instagram.com/isidcore/", "https://twitter.com/isid__or", "https://tiktok.com/@isid__or", "https://www.youtube.com/@isid__or", "https://www.youtube.com/@isidcore", "https://isidcore.substack.com/", "https://www.linkedin.com/in/isidorelu", "https://www.goodreads.com/user/show/184416706-isidore", "https://letterboxd.com/isid__or/", "https://open.spotify.com/user/1224islu", "https://studio.isidorelu.com", "https://blog.isidorelu.com", "https://github.com/isidorelu"]
          }
       </script>
+
+      <!-- Photo gallery: only adds what the old page didn't have -->
+      <style>
+         /* Drive's own video player, used if a Drive video can't stream directly */
+         #photo-gallery .photo-frame {
+            display: block;
+            width: 100%;
+            min-width: 18em;
+            aspect-ratio: 16 / 9;
+            border: 0;
+         }
+      </style>
    </head>
 
    <body>
@@ -66,7 +79,12 @@
          <a href="digitals2.html#main-content">DIGITALS (2026/02/23)</a><br />
          <!-- <a href="digitals.html#main-content">DIGITALS (2026/02/17)</a> -->
 
-         <div class="row">
+         <!--
+            The gallery comes from the photos sheet.
+            data-csv: the photos tab, published as CSV (File → Share → Publish to web)
+            What's written below is shown only if the sheet can't be reached (and is read by search engines).
+         -->
+         <div class="row" id="photo-gallery" data-csv="https://docs.google.com/spreadsheets/d/e/2PACX-1vQCAY8SXEfrW0N_-W1HbeZXZUzdqLuNwo9bny7vWk0fOLygyzX6E9Q2fnM1bRYlJAWMUbnVv81JFRnI/pub?gid=1808272823&single=true&output=csv">
             <div class="col">
                <section class="capsule">
                   <a href="https://www.instagram.com/p/DVm8nWJjsEv/?img_index=1">
@@ -77,11 +95,11 @@
 
                <section class="capsule">
                   <!-- <a href="https://www.youtube.com/watch?v=HtK461D1WPQ"> -->
-<video controls autoplay muted style="max-width: 100%; min-width: 18em; height: auto">
-         <source src="baggy_jeans.mp4" type="video/mp4" />
-      </video>
+                  <video controls autoplay muted style="max-width: 100%; min-width: 18em; height: auto">
+                     <source src="baggy_jeans.mp4" type="video/mp4" />
+                  </video>
                   <!-- </a> -->
-                  <p class="caption">isid or for Lolo Zouai's "<a href="https://www.youtube.com/watch?v=HtK461D1WPQ" style="text-decoration:underline">Baggy Jeans</a>" Music Video (Apr 2026)<br /></p>
+                  <p class="caption">isid or for Lolo Zouai's "<a href="https://www.youtube.com/watch?v=HtK461D1WPQ" style="text-decoration: underline">Baggy Jeans</a>" Music Video (Apr 2026)<br /></p>
                </section>
 
                <section class="capsule">
@@ -185,6 +203,272 @@
                </section>
             </div>
          </div>
+
+         <script>
+            (function () {
+               var root = document.getElementById("photo-gallery");
+               if (!root) return;
+               var CSV = root.getAttribute("data-csv");
+               if (!CSV || /PASTE_/.test(CSV)) return; // not set up yet: keep the gallery written in the page
+
+               // Hide the written-in gallery while the sheet loads; show it again if the sheet can't be reached
+               root.style.visibility = "hidden";
+               var done = false;
+               function reveal() {
+                  if (!done) {
+                     done = true;
+                     root.style.visibility = "";
+                  }
+               }
+               setTimeout(reveal, 6000);
+
+               /* ---------- reading the sheet ---------- */
+
+               // CSV parser that handles quoted fields (commas, quotes, line breaks inside cells)
+               function parseCSV(text) {
+                  var rows = [],
+                     row = [],
+                     field = "",
+                     q = false;
+                  for (var i = 0; i < text.length; i++) {
+                     var c = text[i];
+                     if (q) {
+                        if (c === '"') {
+                           if (text[i + 1] === '"') {
+                              field += '"';
+                              i++;
+                           } else q = false;
+                        } else field += c;
+                     } else if (c === '"') q = true;
+                     else if (c === ",") {
+                        row.push(field);
+                        field = "";
+                     } else if (c === "\n" || c === "\r") {
+                        if (c === "\r" && text[i + 1] === "\n") i++;
+                        row.push(field);
+                        rows.push(row);
+                        row = [];
+                        field = "";
+                     } else field += c;
+                  }
+                  if (field !== "" || row.length) {
+                     row.push(field);
+                     rows.push(row);
+                  }
+                  return rows;
+               }
+
+               // Columns are found by header name, so they can be in any order
+               var HEADERS = {
+                  SIDE: "side",
+                  COLUMN: "side",
+                  HIDE: "hide",
+                  HIDDEN: "hide",
+                  CAPTION: "caption",
+                  FOR: "forTitle",
+                  LINK: "link",
+                  SOURCE: "source",
+                  IMAGE: "source",
+                  MEDIA: "source",
+                  KIND: "kind",
+                  ALT: "alt",
+               };
+
+               function toItems(rows) {
+                  var h = -1,
+                     cols = {};
+                  for (var r = 0; r < Math.min(rows.length, 5) && h < 0; r++) {
+                     var found = {};
+                     rows[r].forEach(function (name, i) {
+                        var key = HEADERS[String(name).trim().toUpperCase()];
+                        if (key && found[key] == null) found[key] = i;
+                     });
+                     if (found.source != null) {
+                        h = r;
+                        cols = found;
+                     }
+                  }
+                  if (h < 0) return null;
+
+                  var items = [];
+                  rows.slice(h + 1).forEach(function (row) {
+                     var get = function (k) {
+                        return cols[k] == null ? "" : String(row[cols[k]] || "").trim();
+                     };
+                     if (get("hide")) return; // anything in HIDE keeps the row off the site
+                     var source = safeUrl(get("source"));
+                     if (!source) return;
+                     var side = get("side").toLowerCase();
+                     items.push({
+                        side: side === "left" || side === "right" ? side : "",
+                        caption: get("caption").replace(/\r\n?/g, "\n"),
+                        forTitle: get("forTitle"),
+                        link: safeUrl(get("link")),
+                        source: source,
+                        video: /video/i.test(get("kind")) || /\.(mp4|m4v|mov|webm)(\?|#|$)/i.test(source),
+                        alt: get("alt"),
+                     });
+                  });
+                  return items;
+               }
+
+               // Full http(s) links, or a file/path on this site (nicole_shoot.jpg)
+               function safeUrl(u) {
+                  if (/^https?:\/\//i.test(u)) return u;
+                  return /^[\w\-./ ]+\.\w{2,5}$/.test(u) && !/\.\./.test(u) ? u : "";
+               }
+
+               // Rows with a SIDE stay there; blank (or "auto") goes to whichever column has fewer
+               function split(items) {
+                  var count = { left: 0, right: 0 };
+                  items.forEach(function (it) {
+                     if (it.side) count[it.side]++;
+                  });
+                  var out = { left: [], right: [] };
+                  items.forEach(function (it) {
+                     var side = it.side;
+                     if (!side) {
+                        side = count.left <= count.right ? "left" : "right";
+                        count[side]++;
+                     }
+                     out[side].push(it);
+                  });
+                  return out;
+               }
+
+               /* ---------- small helpers ---------- */
+
+               function el(tag, cls) {
+                  var e = document.createElement(tag);
+                  if (cls) e.className = cls;
+                  return e;
+               }
+
+               function esc(s) {
+                  return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+               }
+
+               function driveId(u) {
+                  var m = u.match(/drive\.google\.com\/(?:file\/d\/|open\?id=|uc\?(?:.*&)?id=)([\w-]{20,})/i) || u.match(/(?:lh3\.googleusercontent\.com\/d\/|drive\.usercontent\.google\.com\/download\?(?:.*&)?id=)([\w-]{20,})/i);
+                  return m ? m[1] : "";
+               }
+
+               // Caption text → safe HTML. Line breaks stay, [words](https://…) become links,
+               // *like this* → italic, **like this** → bold.
+               function formatCaption(s) {
+                  var out = "",
+                     re = /\[([^\]\n]+)\]\(([^)\s]+)\)/g,
+                     last = 0,
+                     m;
+                  while ((m = re.exec(s))) {
+                     out += style(s.slice(last, m.index));
+                     var href = safeUrl(m[2]);
+                     out += href ? '<a href="' + esc(href) + '" style="text-decoration: underline">' + style(m[1]) + "</a>" : style(m[0]);
+                     last = re.lastIndex;
+                  }
+                  out += style(s.slice(last));
+                  return out.replace(/\n/g, "<br />");
+               }
+               function style(s) {
+                  return esc(s)
+                     .replace(/\*\*([^*\n]+)\*\*/g, "<strong>$1</strong>")
+                     .replace(/\*([^*\n]+)\*/g, "<em>$1</em>");
+               }
+
+               var SIZE = "max-width: 100%; min-width: 18em; height: auto";
+
+               /* ---------- one item ---------- */
+
+               function media(it, eager) {
+                  var id = driveId(it.source);
+                  if (it.video) {
+                     var v = el("video");
+                     v.controls = true;
+                     v.autoplay = true;
+                     v.muted = true;
+                     v.setAttribute("muted", "");
+                     v.setAttribute("playsinline", "");
+                     v.preload = "metadata";
+                     v.setAttribute("style", SIZE);
+                     if (id) v.poster = "https://lh3.googleusercontent.com/d/" + id + "=w1600";
+                     var src = el("source");
+                     src.src = id ? "https://drive.google.com/uc?export=download&id=" + id : it.source;
+                     src.type = "video/mp4";
+                     v.appendChild(src);
+                     // If Google won't stream the file directly, use Drive's own player instead
+                     src.addEventListener("error", function () {
+                        if (!id || !v.parentNode) return;
+                        var f = el("iframe", "photo-frame");
+                        f.src = "https://drive.google.com/file/d/" + id + "/preview";
+                        f.allow = "autoplay; fullscreen";
+                        f.setAttribute("allowfullscreen", "");
+                        f.title = it.alt || "video";
+                        v.parentNode.replaceChild(f, v);
+                     });
+                     return v;
+                  }
+                  var img = el("img");
+                  img.src = id ? "https://lh3.googleusercontent.com/d/" + id + "=w2000" : it.source;
+                  img.alt =
+                     it.alt ||
+                     it.caption
+                        .replace(/\[([^\]]+)\]\([^)]*\)/g, "$1")
+                        .replace(/\*/g, "")
+                        .replace(/\s+/g, " ");
+                  img.setAttribute("style", SIZE);
+                  if (!eager) img.loading = "lazy";
+                  img.decoding = "async";
+                  return img;
+               }
+
+               function build(it, eager) {
+                  var s = el("section", "capsule");
+                  var m = media(it, eager);
+                  if (it.link && !it.video) {
+                     var a = el("a");
+                     a.href = it.link;
+                     a.appendChild(m);
+                     s.appendChild(a);
+                  } else s.appendChild(m);
+
+                  if (it.caption || it.forTitle) {
+                     var p = el("p", "caption");
+                     var html = formatCaption(it.caption);
+                     if (it.forTitle) {
+                        var t = esc(it.forTitle);
+                        html += (html ? "<br />" : "") + "for " + (it.link ? '<a href="' + esc(it.link) + '"> ' + t + " </a>" : t);
+                     }
+                     p.innerHTML = html;
+                     s.appendChild(p);
+                  }
+                  return s;
+               }
+
+               /* ---------- render ---------- */
+
+               fetch(CSV, { cache: "no-store" })
+                  .then(function (r) {
+                     if (!r.ok) throw new Error(r.status);
+                     return r.text();
+                  })
+                  .then(function (text) {
+                     var items = toItems(parseCSV(text));
+                     if (!items || !items.length) return reveal(); // keep the written-in gallery rather than an empty page
+                     var cols = root.querySelectorAll(":scope > .col");
+                     if (cols.length < 2) return reveal();
+                     var parts = split(items);
+                     [parts.left, parts.right].forEach(function (list, i) {
+                        cols[i].innerHTML = "";
+                        list.forEach(function (it, j) {
+                           cols[i].appendChild(build(it, j < 2));
+                        });
+                     });
+                     done = true;
+                     root.style.visibility = "";
+                  })
+                  .catch(reveal);
+            })();
+         </script>
       </main>
 
       <footer>

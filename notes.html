@@ -2,10 +2,11 @@
 <html lang="en">
    <head>
       <meta charset="UTF-8" />
+      <!-- <meta name="viewport" content="width=980"> -->
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta name="description" content="Isidore Lu, a.k.a. isid or, is a pop musician, visual artist, and computer science student based in San Francisco, Pittsburgh, and New York City." />
-      <meta name="keywords" content="Isidore Lu, isid or, pop musician, visual artist, Carnegie Mellon, isid or, music, CMU, computer science, student, CS, New York City, San Francisco, Pittsburgh" />
-      <meta name="author" content="Isidore Lu (isid or)" />
+      <meta name="description" content="Isidore Lu, known as Isid Or, is an American musician, creative director, writer, designer, technologist, and event producer." />
+      <meta name="keywords" content="Isidore Lu, Isid Or, pop musician, artist, creative director, Carnegie Mellon, music, CMU, computer science, CS, New York City, writer, technologist" />
+      <meta name="author" content="Isid Or (Isidore Lu)" />
       <meta name="robots" content="index, follow" />
 
       <title>NOTES / ISIDORELU.COM</title>
@@ -15,7 +16,7 @@
 
       <!-- Open Graph Tags -->
       <meta property="og:title" content="ISIDORELU.COM" />
-      <meta property="og:description" content="pop music & cs." />
+      <meta property="og:description" content="musician writer tech" />
       <meta property="og:image" content="https://isidorelu.com/prof-pic.jpg" />
       <meta property="og:url" content="https://isidorelu.com" />
       <meta property="og:type" content="website" />
@@ -24,7 +25,7 @@
       <!-- Twitter Card Tags -->
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:title" content="ISIDORELU.COM" />
-      <meta name="twitter:description" content="pop music & cs." />
+      <meta name="twitter:description" content="musician writer tech" />
       <meta name="twitter:image" content="https://isidorelu.com/prof-pic.jpg" />
       <meta name="twitter:site" content="@isid__or" />
 
@@ -33,12 +34,126 @@
          {
             "@context": "https://schema.org",
             "@type": "Person",
-            "name": "Isidore Lu",
-            "alternateName": "isid or",
+            "name": "Isid Or",
+            "alternateName": "Isidore Lu",
             "url": "https://isidorelu.com",
-            "sameAs": ["https://instagram.com/isid.or", "https://twitter.com/isid__or", "https://tiktok.com/@isid__or", "https://www.youtube.com/@isid__or", "https://isidcore.substack.com/", "https://www.linkedin.com/in/isidorelu", "https://www.goodreads.com/user/show/184416706-isidore", "https://letterboxd.com/isid__or/", "https://open.spotify.com/user/1224islu", "https://isidbrand.info/", "https://github.com/isidorelu"]
+            "sameAs": ["https://instagram.com/isid.or", "https://www.instagram.com/isidcore/", "https://twitter.com/isid__or", "https://tiktok.com/@isid__or", "https://www.youtube.com/@isid__or", "https://www.youtube.com/@isidcore", "https://isidcore.substack.com/", "https://www.linkedin.com/in/isidorelu", "https://www.goodreads.com/user/show/184416706-isidore", "https://letterboxd.com/isid__or/", "https://open.spotify.com/user/1224islu", "https://studio.isidorelu.com", "https://blog.isidorelu.com", "https://github.com/isidorelu"]
          }
       </script>
+
+      <!-- Notes feed: only adds what the old page didn't have (media, embeds, load more) -->
+      <style>
+         #notes-feed .note-text {
+            margin: 1em 0 0;
+         }
+         #notes-feed .note-text:first-child {
+            margin-top: 0;
+         }
+
+         /* Photos & videos: one fills the width, several sit in a 2-up grid */
+         #notes-feed .note-media {
+            display: grid;
+            gap: 6px;
+            max-width: 520px;
+            margin-top: 10px;
+         }
+         #notes-feed .note-media.multi {
+            grid-template-columns: 1fr 1fr;
+         }
+         #notes-feed .note-media a {
+            display: block;
+         }
+         #notes-feed .note-media img,
+         #notes-feed .note-media video {
+            display: block;
+            width: 100%;
+            height: auto;
+            background: #fff;
+         }
+         #notes-feed .note-media.multi img,
+         #notes-feed .note-media.multi video {
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+         }
+         #notes-feed .note-media video {
+            cursor: pointer;
+         }
+
+         /* Players: YouTube, Vimeo, Spotify, Apple Music, SoundCloud */
+         #notes-feed .note-embed {
+            max-width: 520px;
+            margin-top: 10px;
+         }
+         #notes-feed .note-embed iframe {
+            display: block;
+            width: 100%;
+            border: 0;
+         }
+         #notes-feed .note-embed.ratio {
+            position: relative;
+            aspect-ratio: 16 / 9;
+         }
+         #notes-feed .note-embed.ratio.tall {
+            aspect-ratio: 9 / 16;
+            max-width: 300px;
+         }
+         #notes-feed .note-embed.ratio iframe {
+            position: absolute;
+            inset: 0;
+            height: 100%;
+         }
+
+         /* Articles and anything else: a plain bordered card */
+         #notes-feed .note-card {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            max-width: 520px;
+            margin-top: 10px;
+            padding: 8px;
+            border: 1px solid #000;
+            color: #000;
+            text-decoration: none;
+         }
+         #notes-feed .note-card img {
+            flex: none;
+            width: 56px;
+            height: 56px;
+            object-fit: cover;
+         }
+         #notes-feed .note-card span {
+            display: block;
+            min-width: 0;
+         }
+         #notes-feed .note-card .note-card-title {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+         }
+         #notes-feed .note-card .note-card-site {
+            font-size: 14px;
+            font-style: italic;
+         }
+         #notes-feed .note-card:hover .note-card-title {
+            text-decoration: underline;
+         }
+
+         #notes-feed .notes-more {
+            display: block;
+            margin: 14px auto 0;
+            padding: 6px 18px;
+            font: inherit;
+            font-size: 15px;
+            color: #000;
+            background: #fff;
+            border: 1px solid #000;
+            cursor: pointer;
+         }
+         #notes-feed .notes-more:hover {
+            background: #000;
+            color: #fff;
+         }
+      </style>
    </head>
 
    <body>
@@ -52,76 +167,387 @@
          </div>
 
          <div class="row">
-            <div class="col">
+            <!--
+               data-csv:       the notes tab, published as CSV (File → Share → Publish to web)
+               data-author:    the name before each date
+               data-page-size: notes shown at a time before "load more"
+            -->
+            <div class="col" id="notes-feed" data-csv="https://docs.google.com/spreadsheets/d/e/2PACX-1vRfSE7sbo0iLykFBJprWzxgDlcLiNwPi77SbYn4TFqQdcbF7s_ByZ71ZdddOaPD_Tioq_IPxo5LrIAh/pub?gid=2028933433&single=true&output=csv" data-author="ISIDORE" data-page-size="10">
+               <!-- Shown until the sheet loads (and to search engines). Update it now and then. -->
                <section class="pinned-note">
                   <strong>ISIDORE</strong> • <em>PINNED UPDATE: 2026/10/28</em>
-                  <p>My Japanese mini-album <em> Sincerely, Mr. Love & Pop</em>
-                  by isid or is out now.<br><br>
+                  <p>
+                     My Japanese mini-album <em>Sincerely, Mr. Love & Pop</em> by isid or is out now.<br /><br />
 
-                  In Pittsburgh. Figuring out graduating.<br><br>
+                     In Pittsburgh. Figuring out graduating.<br /><br />
 
-                  Waking up at noon. Reading again. Resetting.
+                     Waking up at noon. Reading again. Resetting.
                   </p>
-               </section>
-
-               <section class="note">
-                  <strong>ISIDORE</strong> • <em>UPDATE: 2026/09/24</em>
-                  <p>In semester in Pittsburgh until 10/10.<br>
-                  Album on Fri 10/9.<br>
-                  In NYC, Sat 10/10 to Sat 10/17.</p>
-               </section>
-
-               <section class="note">
-                  <strong>ISIDORE</strong> • <em>UPDATE: 2026/05/15</em>
-                  <p>Will be in NYC from 5/21 until 8/4.</p>
-               </section>
-
-               <section class="note">
-                  <strong>ISIDORE</strong> • <em>NOTE: 2026/05/15</em>
-                  <p>After a more technical summer last year, I want to try something drastically the opposite. It's what I love anyway.</p>
-               </section>
-
-               <section class="note">
-                  <strong>ISIDORE</strong> • <em>UPDATE: 2026/01/13</em>
-                  <p>I'm currently in Pittsburgh until 5/1 editing my film, mixing my album, and  taking functional prog, computer music, & philosophy.</p>
-               </section>
-
-               <section class="note">
-                  <strong>ISIDORE</strong> • <em> NOTE: 2026/02/27</em>
-                  <p>isid or Intermission</p>
-               </section>
-
-               <section class="note">
-                  <strong>ISIDORE</strong> • <em> NOTE: 2026/01/22</em>
-                  <p>New song Red Velvet tonight.</p>
-               </section>
-
-               <section class="note">
-                  <strong>ISIDORE</strong> • <em> NOTE: 2026/01/13</em>
-                  <p>Publishing site draft now. I hate GitHub</p>
-               </section>
-
-               <section class="note">
-                  <strong>ISIDORE</strong> • <em> NOTE: 2026/01/13</em>
-                  <p>Come earlier to 150 lecture. There's too many people</p>
-               </section>
-
-               <section class="note">
-                  <strong>ISIDORE</strong> • <em> NOTE: 2026/01/13</em>
-                  <p>Dropping algorithms.</p>
-               </section>
-
-               <section class="note">
-                  <strong>ISIDORE</strong> • <em> UPDATE: 2026/01/05</em>
-                  <p>Missed flight this morning.</p>
-               </section>
-
-               <section class="note">
-                  <strong>ISIDORE</strong> • <em> UPDATE: 2026/01/05</em>
-                  <p>There is nothing happening now.</p>
                </section>
             </div>
          </div>
       </main>
+
+      <script>
+         (function () {
+            var root = document.getElementById("notes-feed");
+            if (!root) return;
+            var CSV = root.getAttribute("data-csv");
+            var AUTHOR = root.getAttribute("data-author") || "";
+            var PAGE = parseInt(root.getAttribute("data-page-size"), 10) || 10;
+            if (!CSV || /PASTE_/.test(CSV)) return; // not set up yet: keep the fallback
+
+            /* ---------- reading the sheet ---------- */
+
+            // CSV parser that handles quoted fields (commas, quotes, line breaks inside cells)
+            function parseCSV(text) {
+               var rows = [],
+                  row = [],
+                  field = "",
+                  q = false;
+               for (var i = 0; i < text.length; i++) {
+                  var c = text[i];
+                  if (q) {
+                     if (c === '"') {
+                        if (text[i + 1] === '"') {
+                           field += '"';
+                           i++;
+                        } else q = false;
+                     } else field += c;
+                  } else if (c === '"') q = true;
+                  else if (c === ",") {
+                     row.push(field);
+                     field = "";
+                  } else if (c === "\n" || c === "\r") {
+                     if (c === "\r" && text[i + 1] === "\n") i++;
+                     row.push(field);
+                     rows.push(row);
+                     row = [];
+                     field = "";
+                  } else field += c;
+               }
+               if (field !== "" || row.length) {
+                  row.push(field);
+                  rows.push(row);
+               }
+               return rows;
+            }
+
+            // Columns are found by header name, so they can be in any order
+            var HEADERS = {
+               DATE: "date",
+               TYPE: "type",
+               PIN: "pin",
+               PINNED: "pin",
+               TEXT: "text",
+               PHOTOS: "photos",
+               PHOTO: "photos",
+               VIDEOS: "videos",
+               VIDEO: "videos",
+               LINK: "link",
+               "LINK TITLE": "linkTitle",
+               "LINK IMAGE": "linkImage",
+            };
+
+            function toNotes(rows) {
+               var h = -1,
+                  cols = {};
+               for (var r = 0; r < Math.min(rows.length, 5) && h < 0; r++) {
+                  var found = {};
+                  rows[r].forEach(function (name, i) {
+                     var key = HEADERS[String(name).trim().toUpperCase()];
+                     if (key && found[key] == null) found[key] = i;
+                  });
+                  if (found.text != null) {
+                     h = r;
+                     cols = found;
+                  }
+               }
+               if (h < 0) return null;
+
+               var notes = [];
+               rows.slice(h + 1).forEach(function (row) {
+                  var get = function (k) {
+                     return cols[k] == null ? "" : String(row[cols[k]] || "").trim();
+                  };
+                  var type = get("type").toLowerCase();
+                  if (type === "hidden") return;
+                  var n = {
+                     date: get("date"),
+                     type: /update/.test(type) ? "UPDATE" : "NOTE",
+                     pinned: /^(pinned|pin|yes|true|x|✓|1)$/i.test(get("pin")) || /pin/.test(type),
+                     text: get("text").replace(/\r\n?/g, "\n"),
+                     photos: lines(get("photos")),
+                     videos: lines(get("videos")),
+                     link: get("link"),
+                     linkTitle: get("linkTitle"),
+                     linkImage: get("linkImage"),
+                  };
+                  if (n.text || n.photos.length || n.videos.length || n.link) notes.push(n);
+               });
+               // Pinned first, then the sheet's own order (top row = newest)
+               return notes
+                  .filter(function (n) {
+                     return n.pinned;
+                  })
+                  .concat(
+                     notes.filter(function (n) {
+                        return !n.pinned;
+                     })
+                  );
+            }
+
+            function lines(s) {
+               return s
+                  .split(/\s*[\n,]\s*/)
+                  .map(function (x) {
+                     return x.trim();
+                  })
+                  .filter(function (x) {
+                     return /^https?:\/\//i.test(x);
+                  });
+            }
+
+            /* ---------- small helpers ---------- */
+
+            function el(tag, cls, text) {
+               var e = document.createElement(tag);
+               if (cls) e.className = cls;
+               if (text != null) e.textContent = text;
+               return e;
+            }
+
+            function esc(s) {
+               return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+            }
+
+            // 2026-10-28, 10/28/2026, 2026/10/28 → 2026/10/28
+            function fmtDate(s) {
+               var m = s.match(/^(\d{4})[-\/.](\d{1,2})[-\/.](\d{1,2})/);
+               if (m) return m[1] + "/" + pad(m[2]) + "/" + pad(m[3]);
+               m = s.match(/^(\d{1,2})\/(\d{1,2})\/(\d{4})/);
+               if (m) return m[3] + "/" + pad(m[1]) + "/" + pad(m[2]);
+               return s;
+            }
+            function pad(n) {
+               return ("0" + n).slice(-2);
+            }
+
+            // Plain text → safe HTML. Line breaks stay, URLs become links,
+            // *like this* → italic, **like this** → bold.
+            function formatText(s) {
+               var out = "",
+                  re = /https?:\/\/[^\s<>"]+/g,
+                  last = 0,
+                  m;
+               while ((m = re.exec(s))) {
+                  var url = m[0].replace(/[.,;:!?)\]]+$/, "");
+                  out += style(s.slice(last, m.index));
+                  out += '<a href="' + esc(url) + '" target="_blank" rel="noopener">' + esc(url.replace(/^https?:\/\/(www\.)?/, "")) + "</a>";
+                  last = m.index + url.length;
+                  re.lastIndex = last;
+               }
+               out += style(s.slice(last));
+               return out.replace(/\n/g, "<br>");
+            }
+            function style(s) {
+               return esc(s)
+                  .replace(/\*\*([^*\n]+)\*\*/g, "<strong>$1</strong>")
+                  .replace(/\*([^*\n]+)\*/g, "<em>$1</em>");
+            }
+
+            function driveId(u) {
+               var m = u.match(/drive\.google\.com\/(?:file\/d\/|open\?id=|uc\?(?:.*&)?id=)([\w-]{20,})/i) || u.match(/(?:lh3\.googleusercontent\.com\/d\/|drive\.usercontent\.google\.com\/download\?(?:.*&)?id=)([\w-]{20,})/i);
+               return m ? m[1] : "";
+            }
+
+            /* ---------- photos & videos ---------- */
+
+            function photo(u) {
+               var id = driveId(u);
+               var a = el("a");
+               a.href = id ? "https://lh3.googleusercontent.com/d/" + id + "=s0" : u;
+               a.target = "_blank";
+               a.rel = "noopener";
+               var img = el("img");
+               img.src = id ? "https://lh3.googleusercontent.com/d/" + id + "=w1600" : u;
+               img.alt = "";
+               img.loading = "lazy";
+               img.decoding = "async";
+               a.appendChild(img);
+               return a;
+            }
+
+            // Plays silently on a loop while on screen. Tap to turn the sound on or off.
+            var observer =
+               "IntersectionObserver" in window
+                  ? new IntersectionObserver(
+                       function (entries) {
+                          entries.forEach(function (en) {
+                             var v = en.target;
+                             if (en.isIntersecting) {
+                                if (!v.getAttribute("src")) v.src = v.getAttribute("data-src");
+                                var p = v.play();
+                                if (p && p.catch) p.catch(function () {});
+                             } else if (!v.paused) v.pause();
+                          });
+                       },
+                       { threshold: 0.25 }
+                    )
+                  : null;
+
+            function video(u) {
+               var id = driveId(u);
+               var v = el("video");
+               v.muted = true;
+               v.setAttribute("muted", "");
+               v.setAttribute("playsinline", "");
+               v.loop = true;
+               v.autoplay = true;
+               v.preload = "metadata";
+               var src = id ? "https://drive.google.com/uc?export=download&id=" + id : u;
+               if (id) v.poster = "https://lh3.googleusercontent.com/d/" + id + "=w1600";
+               v.addEventListener("click", function () {
+                  v.muted = !v.muted;
+               });
+               // If Google won't stream the file directly, fall back to Drive's own player
+               v.addEventListener(
+                  "error",
+                  function () {
+                     if (!id || !v.parentNode) return;
+                     var box = el("div", "note-embed ratio");
+                     var f = el("iframe");
+                     f.src = "https://drive.google.com/file/d/" + id + "/preview";
+                     f.allow = "autoplay";
+                     f.loading = "lazy";
+                     box.appendChild(f);
+                     v.parentNode.replaceChild(box, v);
+                  },
+                  true
+               );
+               if (observer) {
+                  v.setAttribute("data-src", src);
+                  observer.observe(v);
+               } else v.src = src;
+               return v;
+            }
+
+            /* ---------- links ---------- */
+
+            function frame(src, cls, height) {
+               var box = el("div", "note-embed" + (cls ? " " + cls : ""));
+               var f = el("iframe");
+               f.src = src;
+               f.loading = "lazy";
+               f.allow = "autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture";
+               f.setAttribute("allowfullscreen", "");
+               if (height) f.height = height;
+               box.appendChild(f);
+               return box;
+            }
+
+            function linkBlock(n) {
+               var u = n.link,
+                  m;
+               if ((m = u.match(/(?:youtube\.com\/(?:watch\?(?:.*&)?v=|embed\/|live\/)|youtu\.be\/)([\w-]{11})/i))) return frame("https://www.youtube-nocookie.com/embed/" + m[1], "ratio");
+               if ((m = u.match(/youtube\.com\/shorts\/([\w-]{11})/i))) return frame("https://www.youtube-nocookie.com/embed/" + m[1], "ratio tall");
+               if ((m = u.match(/vimeo\.com\/(?:video\/)?(\d+)/i))) return frame("https://player.vimeo.com/video/" + m[1], "ratio");
+               if ((m = u.match(/open\.spotify\.com\/(?:intl-[\w-]+\/)?(track|album|playlist|episode|show|artist)\/([A-Za-z0-9]+)/i))) return frame("https://open.spotify.com/embed/" + m[1] + "/" + m[2], "", /track|episode/.test(m[1]) ? 152 : 352);
+               if (/music\.apple\.com\//i.test(u)) {
+                  var single = /[?&]i=\d+/.test(u) || /\/song\//.test(u);
+                  return frame(u.replace(/^https?:\/\/(?:embed\.)?music\.apple\.com/i, "https://embed.music.apple.com"), "", single ? 175 : 450);
+               }
+               if (/soundcloud\.com\//i.test(u) && !/w\.soundcloud\.com/.test(u)) return frame("https://w.soundcloud.com/player/?url=" + encodeURIComponent(u) + "&color=%23000000&visual=false&show_comments=false", "", /\/sets\//.test(u) ? 300 : 166);
+
+               // Anything else (articles, Substack, Bandcamp…): a simple card
+               var a = el("a", "note-card");
+               a.href = u;
+               a.target = "_blank";
+               a.rel = "noopener";
+               var host = u.replace(/^https?:\/\/(www\.)?/i, "").split(/[\/?#]/)[0];
+               if (n.linkImage) {
+                  var img = el("img");
+                  img.src = n.linkImage;
+                  img.alt = "";
+                  img.loading = "lazy";
+                  img.onerror = function () {
+                     img.remove();
+                  };
+                  a.appendChild(img);
+               }
+               var words = el("span");
+               words.appendChild(el("span", "note-card-title", n.linkTitle || u.replace(/^https?:\/\/(www\.)?/i, "")));
+               words.appendChild(el("span", "note-card-site", host));
+               a.appendChild(words);
+               return a;
+            }
+
+            /* ---------- one note ---------- */
+
+            function build(n) {
+               var s = el("section", n.pinned ? "pinned-note" : "note");
+               s.appendChild(el("strong", "", AUTHOR));
+               s.appendChild(document.createTextNode(" • "));
+               var label = (n.pinned ? "PINNED " : "") + n.type + (n.date ? ": " + fmtDate(n.date) : "");
+               s.appendChild(el("em", "", label));
+
+               if (n.text) {
+                  var p = el("p", "note-text");
+                  p.innerHTML = formatText(n.text);
+                  s.appendChild(p);
+               }
+
+               var count = n.photos.length + n.videos.length;
+               if (count) {
+                  var box = el("div", "note-media" + (count > 1 ? " multi" : ""));
+                  n.photos.forEach(function (u) {
+                     box.appendChild(photo(u));
+                  });
+                  n.videos.forEach(function (u) {
+                     box.appendChild(video(u));
+                  });
+                  s.appendChild(box);
+               }
+
+               if (n.link) s.appendChild(linkBlock(n));
+               return s;
+            }
+
+            /* ---------- feed & load more ---------- */
+
+            var notes = [],
+               shown = 0;
+            var more = el("button", "notes-more", "load more");
+            more.type = "button";
+            more.addEventListener("click", showMore);
+
+            function showMore() {
+               var next = notes.slice(shown, shown + PAGE);
+               next.forEach(function (n) {
+                  root.insertBefore(build(n), more);
+               });
+               shown += next.length;
+               more.hidden = shown >= notes.length;
+               if (more.hidden) more.remove();
+            }
+
+            fetch(CSV, { cache: "no-store" })
+               .then(function (r) {
+                  if (!r.ok) throw new Error(r.status);
+                  return r.text();
+               })
+               .then(function (text) {
+                  var list = toNotes(parseCSV(text));
+                  if (!list || !list.length) return; // keep the fallback rather than an empty page
+                  notes = list;
+                  root.innerHTML = "";
+                  root.appendChild(more);
+                  showMore();
+               })
+               .catch(function () {
+                  /* sheet unreachable: the fallback note stays */
+               });
+         })();
+      </script>
    </body>
 </html>
