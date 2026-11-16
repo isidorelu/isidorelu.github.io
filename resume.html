@@ -1,0 +1,534 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="description" content="Resume of Isidore Lu (Isid Or): education at Carnegie Mellon University, work experience, projects, and skills." />
+      <meta name="keywords" content="Isidore Lu, Isid Or, resume, CV, Carnegie Mellon, music technology, computer science, audio, creative director, New York City" />
+      <meta name="author" content="Isid Or (Isidore Lu)" />
+      <meta name="robots" content="index, follow" />
+
+      <title>RESUME / ISIDORELU.COM</title>
+      <link rel="icon" href="prof-pic.jpg" type="image/jpeg" />
+      <link rel="stylesheet" href="style.css" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+      <!-- Open Graph Tags -->
+      <meta property="og:title" content="Resume — Isidore Lu" />
+      <meta property="og:description" content="Resume of Isidore Lu (Isid Or)." />
+      <meta property="og:image" content="https://isidorelu.com/prof-pic.jpg" />
+      <meta property="og:url" content="https://isidorelu.com/resume.html" />
+      <meta property="og:type" content="profile" />
+      <meta property="og:locale" content="en_US" />
+
+      <!-- Twitter Card Tags -->
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:title" content="Resume — Isidore Lu" />
+      <meta name="twitter:description" content="Resume of Isidore Lu (Isid Or)." />
+      <meta name="twitter:image" content="https://isidorelu.com/prof-pic.jpg" />
+      <meta name="twitter:site" content="@isid__or" />
+
+      <!-- Links Connections -->
+      <script type="application/ld+json">
+         {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Isid Or",
+            "alternateName": "Isidore Lu",
+            "url": "https://isidorelu.com",
+            "alumniOf": "Carnegie Mellon University",
+            "sameAs": ["https://instagram.com/isid.or", "https://www.instagram.com/isidcore/", "https://twitter.com/isid__or", "https://tiktok.com/@isid__or", "https://www.youtube.com/@isid__or", "https://isidcore.substack.com/", "https://www.linkedin.com/in/isidorelu", "https://studio.isidorelu.com", "https://blog.isidorelu.com", "https://github.com/isidorelu"]
+         }
+      </script>
+
+      <!-- Resume page. Everything is scoped to .resume so it doesn't touch the rest of style.css. -->
+      <style>
+         .resume { max-width: 8.5in; margin: 0 auto; text-align: left; }
+         .resume-tools { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.5em 1em; margin-bottom: 0.75em; }
+         .resume-tools button {
+            font: inherit; color: #000; background: #eeeeee; border: 1px solid black;
+            padding: 0.2em 1em; cursor: pointer; border-radius: 0;
+         }
+         .resume-tools button:hover { background: #dddddd; }
+         .resume-tools button[disabled] { cursor: progress; color: #555; }
+         .resume-tools .updated { font-style: italic; }
+
+         .resume-paper { border: 1px solid black; padding: 0.55in 0.6in; line-height: 1.3; }
+         .resume .pdf-only { display: none; }
+         .resume h1.r-name { font-size: 1.7em; text-align: center; margin: 0; line-height: 1.2; }
+         .resume .r-contact { text-align: center; margin: 0.1em 0 0; }
+         .resume section.r-section { text-align: left; margin-top: 1.1em; }
+         .resume h2.r-heading { font-size: 1em; font-weight: bold; margin: 0; line-height: 1.3; }
+         .resume h2.r-heading .r-tail { font-weight: normal; }
+         .resume .r-entry + .r-entry { margin-top: 1em; }
+         .resume .r-entry p { margin: 0; }
+         .resume .r-entry p.r-gap { margin-top: 1em; }
+         .resume .r-entry ul { margin: 0; padding-left: 2.6em; list-style-type: disc; }
+         .resume .r-entry ul ul { padding-left: 2.2em; list-style-type: circle; }
+
+         @media (max-width: 768px) {
+            .resume-paper { padding: 1.2em 1em; }
+            .resume .r-entry ul { padding-left: 1.5em; }
+            .resume .r-entry ul ul { padding-left: 1.3em; }
+         }
+
+         /* Printing the page (Cmd+P) prints just the resume */
+         @media print {
+            @page { size: letter; margin: 0.5in; }
+            body > main > *:not(.resume-row), footer, .resume-tools, .resume .web-only { display: none !important; }
+            .resume .pdf-only { display: revert; }
+            main { margin: 0; }
+            .resume-paper { border: 0; padding: 0; font-size: 11pt; }
+            .resume a { color: inherit; }
+         }
+      </style>
+   </head>
+
+   <body>
+      <main>
+         <!-- main header -->
+         <div class="row">
+            <div class="col">
+               <div id="clock">
+                  <span id="live-date"></span>,
+                  <span id="live-clock"></span>
+                  • <strong>RESUME / ISIDORELU.COM</strong> - <em>This site was written from scratch in HTML & CSS.</em>
+               </div>
+               <script src="clock.js"></script>
+            </div>
+         </div>
+
+         <div class="row">
+            <div class="col">
+               <div id="nav-placeholder"></div>
+            </div>
+         </div>
+
+         <div class="space" id="main-content"></div>
+
+         <div class="row resume-row">
+            <div class="col">
+               <!--
+                  RESUME PAGE. Content comes from the Resume Google Sheet.
+                  Paste each tab's published CSV link below (File → Share → Publish to web → choose the tab → CSV).
+                  Everything written inside this block is a copy of the sheet for search engines; it also shows
+                  if the sheet can't be reached. To refresh it, open resume.html?export and paste the result over this block.
+               -->
+                              <article class="resume" id="resume" data-page="https://docs.google.com/spreadsheets/d/e/2PACX-1vTjnZcJfzxgDiyJqhYBArL7zP_ik4M_Z5WMJJymLQWV6t18orBgBXpCeEqvKFPBHLxqp4JVEWPCG2Mn/pub?gid=2054066629&single=true&output=csv" data-resume="https://docs.google.com/spreadsheets/d/e/2PACX-1vTjnZcJfzxgDiyJqhYBArL7zP_ik4M_Z5WMJJymLQWV6t18orBgBXpCeEqvKFPBHLxqp4JVEWPCG2Mn/pub?gid=831081876&single=true&output=csv" data-pdf-name="Isidore_Lu_Resume">
+                  <div class="resume-tools">
+                     <button type="button" id="resume-pdf">Download PDF</button>
+                     <span class="updated" id="resume-updated">Last updated February 2, 2026.</span>
+                  </div>
+
+                  <div class="resume-paper" id="resume-paper">
+<h1 class="r-name">Isidore Lu</h1>
+<p class="r-contact"><span><a href="mailto:isidorel@andrew.cmu.edu">isidorel@andrew.cmu.edu</a></span><span> • 415-312-2623</span></p>
+<section class="r-section">
+<h2 class="r-heading"><u>EDUCATION</u></h2>
+<div class="r-entry"><p class="r-head"><b>Carnegie Mellon University</b> (Class of 2027) – <i>Pittsburgh, PA</i></p>
+<p>Bachelor of Science in <b>Music &amp; Technology - Computer Science Focus</b></p>
+<p>Minors in Business Administration + Literature &amp; Culture</p>
+<ul>
+<li>Overall GPA: 3.60/4.00</li>
+<li>Relevant Courses:<ul>
+<li>Introduction to Computer Systems • Electronic Devices and Analog Circuits</li>
+<li>Multitrack Recording • Editing &amp; Mastering • Repertoire &amp; Listening IV</li>
+<li>Marketing I • Intro to Screenwriting</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="r-entry"><p class="r-head"><b>Lowell High School</b> (Class of 2022) – <i>San Francisco, CA</i></p>
+<ul>
+<li>GPA 4.45/4.00</li>
+</ul>
+</div>
+</section>
+<section class="r-section">
+<h2 class="r-heading"><u>WORK EXPERIENCE</u></h2>
+<div class="r-entry"><p class="r-head"><b>Baobab Studios</b> – <b>AI Content Intern &amp; Engineer</b> (May - Aug 2025) – <i>San Francisco, CA</i></p>
+<ul>
+<li><b>Engineering:</b> Implementing backend systems in agile sprints to streamline multimodal AI workflows as API for creative automation, content generation, and post-production</li>
+<li><b>Creative:</b> Producing social media optimized short story animations and content, handling storyboarding, motion graphics, video editing, sound design, and audio mixing with the latest diffusion and video models and industry-standard tools (e.g., Adobe CC, Final Cut Pro, Pro Tools), contributing to a portfolio of innovative short-form content</li>
+<li><b>Research:</b> Testing and benchmarking emerging AI diffusion and video models and API — assessing generation quality, latency, scalability, and integration potential within a production environment</li>
+</ul>
+</div>
+<div class="r-entry"><p class="r-head"><b>Kodansha USA</b> – <b>Composer &amp; Audio Supervisor</b> (Jul 2022 - May 2025) – <i>New York City, NY (Remote)</i></p>
+<ul>
+<li>Composing loop tracks for promotional anime videos.</li>
+<li>Audio mixing, mastering, &amp; sound design.</li>
+</ul>
+</div>
+<div class="r-entry"><p class="r-head"><b>57-101/347 Teaching Assistant</b> (Aug 2023 - May 2025) – <i>Pittsburgh, PA</i></p>
+<ul>
+<li>57-347 Electronic and Computer Music</li>
+<li>57-101 Introduction to Music Technology</li>
+</ul>
+</div>
+<div class="r-entry"><p class="r-head"><b>unseelie Record Label</b> – <b>Business Intern</b> (Nov 2022 - Aug 2024) – <i>New York City, NY (Remote)</i></p>
+<ul>
+<li>Writing PR to music publications (Pitchfork, Resident Advisor, AQNB)</li>
+<li>Pitching music for corporate projects (Netflix, Apple)</li>
+<li>Planning live events and global release campaigns</li>
+<li>Working with distributors in digital &amp; physical markets</li>
+<li>Mandarin-English translation</li>
+</ul>
+</div>
+</section>
+<section class="r-section">
+<h2 class="r-heading"><u>PROJECTS</u></h2>
+<div class="r-entry"><p class="r-head"><b>isid POPs!: Music Track Builder</b> (Fall 2023) – <i>Pittsburgh, PA</i></p>
+<ul>
+<li>Programming &amp; designing fully-functioning Digital Audio Workstation in Python</li>
+</ul>
+</div>
+<div class="r-entry"><p class="r-head"><b>Dynamic Memory Allocator</b> (Spring 2025) – <i>Pittsburgh, PA</i></p>
+<ul>
+<li>Building custom heap allocator in C, implementing free lists, block coalescing, and fragmentation control &amp; optimized allocation and deallocation paths for low overhead and predictable performance</li>
+</ul>
+</div>
+</section>
+<section class="r-section">
+<h2 class="r-heading"><u>SKILLS / PROGRAMS + LANGUAGES</u></h2>
+<div class="r-entry"><p>Python • C • HTML/CSS/JS • SML • Lisp • Assembly • Circuit Design • PR &amp; Marketing • Audio Mixing &amp; Composition • Sound Recording &amp; Design • Radio Broadcasting • Photo/Video Editing • Acting &amp; Dance</p>
+<p class="r-gap">ComfyUI • Midjourney/Veo/Kling • Ableton Live • Pro Tools • Final Cut Pro • Adobe Photoshop/InDesign • Excel</p>
+<p>English (<i>Native</i>) • Mandarin (<i>Proficient</i>) • Japanese (<i>Proficient</i>)</p>
+</div>
+</section>
+<section class="r-section">
+<h2 class="r-heading"><u>INTERESTS</u></h2>
+<div class="r-entry"><p>Pop music &amp; entertainment • Hip-hop, contemporary, &amp; K-pop dance • Classical cello • Media &amp; literature</p>
+</div>
+</section>
+<section class="r-section">
+<h2 class="r-heading"><u>REFERENCE</u><span class="r-tail"> – Available upon request.</span></h2>
+</section>
+</div>
+
+               </article>
+            </div>
+         </div>
+      </main>
+
+      <footer>
+         <div id="footer-placeholder"></div>
+      </footer>
+      <script src="load-components.js"></script>
+
+      <script>
+         /* Resume page — renders the resume from the Resume Google Sheet and builds the one-page PDF.
+            Cell formatting: **bold** · *italic* · [text](https://…) link.
+            In TEXT: "- " bullet · "-- " sub-bullet · other lines are plain lines · a blank line adds a gap. */
+         (function () {
+            var root = document.getElementById('resume');
+            if (!root) return;
+            var paper = document.getElementById('resume-paper');
+            var PDFMAKE = 'https://cdn.jsdelivr.net/npm/pdfmake@0.3.14/build/';
+
+            /* ---------- reading the sheet ---------- */
+            function parseCSV(text) {
+               var rows = [], row = [], cell = '', q = false;
+               for (var i = 0; i < text.length; i++) {
+                  var ch = text[i];
+                  if (q) {
+                     if (ch === '"') { if (text[i + 1] === '"') { cell += '"'; i++; } else q = false; }
+                     else cell += ch;
+                  } else if (ch === '"') q = true;
+                  else if (ch === ',') { row.push(cell); cell = ''; }
+                  else if (ch === '\n' || ch === '\r') {
+                     if (ch === '\r' && text[i + 1] === '\n') i++;
+                     row.push(cell); rows.push(row); row = []; cell = '';
+                  } else cell += ch;
+               }
+               if (cell !== '' || row.length) { row.push(cell); rows.push(row); }
+               return rows;
+            }
+            // Finds the header row (under the sheet's title and instructions) and returns
+            // the rows below it as objects keyed by lowercase header.
+            function records(rows, required) {
+               for (var h = 0; h < rows.length; h++) {
+                  var head = rows[h].map(function (c) { return c.trim().toUpperCase(); });
+                  if (required.every(function (r) { return head.indexOf(r) > -1; })) {
+                     return rows.slice(h + 1).map(function (r) {
+                        var o = {};
+                        head.forEach(function (k, j) { if (k) o[k.toLowerCase()] = (r[j] || '').replace(/\r/g, ''); });
+                        o.show = visibility(o.hide);
+                        return o;
+                     });
+                  }
+               }
+               throw new Error('Headers not found: ' + required.join(', '));
+            }
+            // HIDE column: "hidden" → off everywhere · "hide on PDF" → site only · "hide on web" → PDF only
+            function visibility(v) {
+               v = (v || '').trim().toLowerCase();
+               if (!v) return 'all';
+               if (/pdf/.test(v)) return 'web';
+               if (/web|site/.test(v)) return 'pdf';
+               return 'none';
+            }
+            function cls(show) { return show === 'web' ? ' class="web-only"' : show === 'pdf' ? ' class="pdf-only"' : ''; }
+            function load(name, required) {
+               var url = root.getAttribute('data-' + name) || '';
+               if (!/^https?:/.test(url)) return Promise.reject(new Error('No CSV link for ' + name));
+               return fetch(url).then(function (r) {
+                  if (!r.ok) throw new Error(name + ': HTTP ' + r.status);
+                  return r.text();
+               }).then(function (t) { return records(parseCSV(t), required); });
+            }
+
+            /* ---------- text formatting ---------- */
+            function esc(s) {
+               return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+            }
+            function safeUrl(u) {
+               u = u.trim();
+               return /^[a-z][a-z0-9+.-]*:/i.test(u) && !/^(https?|mailto|tel):/i.test(u) ? null : u;
+            }
+            function emph(s) {
+               return s.replace(/\*\*(.+?)\*\*/g, '<b>$1</b>').replace(/\*(.+?)\*/g, '<i>$1</i>');
+            }
+            var LINK = /\[([^\]]+)\]\(((?:[^()\s]|\([^()\s]*\))+)\)/g;
+            function inline(s) {
+               var keep = [];
+               s = esc(s.trim()).replace(LINK, function (m, text, url) {
+                  var u = safeUrl(url);
+                  if (u === null) return m;
+                  keep.push('<a href="' + u + '">' + emph(text) + '</a>');
+                  return '\u0001' + (keep.length - 1) + '\u0002';
+               });
+               return emph(s).replace(/\u0001(\d+)\u0002/g, function (m, i) { return keep[i]; });
+            }
+            // TEXT cell → plain lines, bullets and sub-bullets
+            function body(text) {
+               var html = '', list = null, gap = false;
+               function closeList() {
+                  if (!list) return;
+                  html += '<ul>' + list.map(function (li) {
+                     return '<li>' + li.html + (li.sub.length ? '<ul>' + li.sub.map(function (s) { return '<li>' + s + '</li>'; }).join('') + '</ul>' : '') + '</li>';
+                  }).join('') + '</ul>';
+                  list = null;
+               }
+               text.split('\n').forEach(function (line) {
+                  if (!line.trim()) { closeList(); gap = !!html; return; }
+                  var sub = line.match(/^\s*--\s+(.*)$/), top = line.match(/^\s*[-•]\s+(.*)$/);
+                  if (sub && list && list.length) { list[list.length - 1].sub.push(inline(sub[1])); }
+                  else if (sub || top) {
+                     if (!list) { list = []; if (gap) { html += '<p class="r-gap" aria-hidden="true"></p>'; gap = false; } }
+                     list.push({ html: inline((sub || top)[1]), sub: [] });
+                  } else {
+                     closeList();
+                     html += '<p' + (gap ? ' class="r-gap"' : '') + '>' + inline(line) + '</p>';
+                     gap = false;
+                  }
+               });
+               closeList();
+               return html;
+            }
+            function entryLine(r) {
+               var h = '';
+               if (r.name && r.name.trim()) h += '<b>' + inline(r.name) + '</b>';
+               if (r.role && r.role.trim()) h += (h ? ' – ' : '') + '<b>' + inline(r.role) + '</b>';
+               if (r.dates && r.dates.trim()) h += (h ? ' ' : '') + '(' + inline(r.dates) + ')';
+               if (r.location && r.location.trim()) h += (h ? ' – ' : '') + '<i>' + inline(r.location) + '</i>';
+               return h ? '<p class="r-head">' + h + '</p>' : '';
+            }
+
+            /* ---------- rendering ---------- */
+            function render(pageRows, rows) {
+               var s = {}, contact = [];
+               pageRows.forEach(function (r) {
+                  var k = (r.setting || '').trim().toLowerCase();
+                  if (!k || r.show === 'none') return;
+                  if (k === 'contact') { if ((r.value || '').trim()) contact.push(r); }
+                  else s[k] = r;
+               });
+               var html = '';
+               if (s.name && s.name.show !== 'none') html += '<h1 class="r-name">' + inline(s.name.value || '') + '</h1>';
+               if (contact.length) html += '<p class="r-contact">' + contact.map(function (r, i) {
+                  return '<span' + cls(r.show) + '>' + (i ? ' • ' : '') + inline(r.value) + '</span>';
+               }).join('') + '</p>';
+
+               var section = null, skip = false, out = [];
+               rows.forEach(function (r) {
+                  var heading = (r.section || '').trim();
+                  if (heading) {
+                     skip = r.show === 'none';
+                     section = skip ? null : { show: r.show, heading: heading, entries: [] };
+                     if (section) out.push(section);
+                  }
+                  if (skip || r.show === 'none') return;
+                  var e = entryLine(r) + body(r.text || '');
+                  if (!e) return;
+                  if (!section) { section = { show: 'all', heading: '', entries: [] }; out.push(section); }
+                  section.entries.push('<div class="r-entry' + (r.show === 'web' ? ' web-only' : r.show === 'pdf' ? ' pdf-only' : '') + '">' + e + '</div>');
+               });
+               out.forEach(function (sec) {
+                  var c = sec.show === 'web' ? ' web-only' : sec.show === 'pdf' ? ' pdf-only' : '';
+                  var h = '';
+                  if (sec.heading) {
+                     var m = sec.heading.split(/\s[–—]\s/);
+                     h = '<h2 class="r-heading"><u>' + inline(m[0]) + '</u>' +
+                        (m.length > 1 ? '<span class="r-tail"> – ' + inline(m.slice(1).join(' – ')) + '</span>' : '') + '</h2>';
+                  }
+                  html += '<section class="r-section' + c + '">' + h + sec.entries.join('') + '</section>';
+               });
+               paper.innerHTML = html;
+
+               var up = s['last updated'];
+               document.getElementById('resume-updated').innerHTML =
+                  up && up.show !== 'none' && up.show !== 'pdf' && (up.value || '').trim() ? 'Last updated ' + inline(up.value.replace(/\.$/, '')) + '.' : '';
+               var fn = s['pdf file name'];
+               if (fn && (fn.value || '').trim()) root.setAttribute('data-pdf-name', fn.value.trim().replace(/\.pdf$/i, '').replace(/[\/\\:*?"<>|]/g, '-'));
+            }
+
+            /* ---------- PDF: built from what's on the page, shrunk until it fits one page ---------- */
+            function loadScript(src) {
+               return new Promise(function (ok, fail) {
+                  var el = document.createElement('script');
+                  el.src = src; el.onload = ok; el.onerror = function () { fail(new Error('Could not load ' + src)); };
+                  document.head.appendChild(el);
+               });
+            }
+            var libs;
+            function pdfLib() {
+               if (!libs) libs = (window.pdfMake ? Promise.resolve() : loadScript(PDFMAKE + 'pdfmake.min.js'))
+                  .then(function () { return loadScript(PDFMAKE + 'standard-fonts/Times.js'); })
+                  .catch(function (e) { libs = null; throw e; });
+               return libs;
+            }
+            function skipped(el) { return el.classList && el.classList.contains('web-only'); }
+            // Inline HTML → pdfmake text runs
+            function runs(node, st, out) {
+               out = out || []; st = st || {};
+               [].forEach.call(node.childNodes, function (n) {
+                  if (n.nodeType === 3) {
+                     var t = n.nodeValue.replace(/\s+/g, ' ');
+                     if (t) out.push(Object.assign({ text: t }, st));
+                  } else if (n.nodeType === 1 && !skipped(n)) {
+                     var tag = n.tagName, s2 = Object.assign({}, st);
+                     if (tag === 'BR') { out.push({ text: '\n' }); return; }
+                     if (tag === 'B' || tag === 'STRONG') s2.bold = true;
+                     if (tag === 'I' || tag === 'EM') s2.italics = true;
+                     if (tag === 'U') s2.decoration = 'underline';
+                     if (tag === 'A') { s2.link = n.getAttribute('href'); s2.color = '#1155cc'; s2.decoration = 'underline'; }
+                     if (tag === 'UL') return;
+                     runs(n, s2, out);
+                  }
+               });
+               return out;
+            }
+            function trimRuns(r) {
+               if (r.length) { r[0].text = r[0].text.replace(/^\s+/, ''); r[r.length - 1].text = r[r.length - 1].text.replace(/\s+$/, ''); }
+               return r;
+            }
+            function kids(el, sel) {
+               return [].filter.call(el.children, function (c) { return c.matches(sel) && !skipped(c); });
+            }
+            function list(ul, k, depth) {
+               return {
+                  ul: kids(ul, 'li').map(function (li) {
+                     var item = { text: trimRuns(runs(li)) }, sub = kids(li, 'ul')[0];
+                     return sub ? { stack: [item, list(sub, k, depth + 1)] } : item;
+                  }),
+                  type: depth ? 'circle' : 'disc',
+                  margin: [depth ? 14 * k : 22 * k, 0, 0, 0]
+               };
+            }
+            function docDef(k) {
+               var content = [], size = 10.5 * k;
+               [].forEach.call(paper.children, function (el) {
+                  if (skipped(el)) return;
+                  if (el.matches('h1')) content.push({ text: trimRuns(runs(el)), fontSize: 20 * k, bold: true, alignment: 'center' });
+                  else if (el.matches('.r-contact')) content.push({ text: trimRuns(runs(el)), alignment: 'center' });
+                  else if (el.matches('section')) {
+                     var first = true;
+                     [].forEach.call(el.children, function (c) {
+                        if (skipped(c)) return;
+                        if (c.matches('h2')) {
+                           var hr = trimRuns(runs(c)).map(function (r) { if (r.decoration) r.bold = true; return r; });
+                           content.push({ text: hr, margin: [0, size * 1.1, 0, 0] }); return;
+                        }
+                        if (!c.matches('.r-entry')) return;
+                        var top = first ? 0 : size * 0.95; first = false;
+                        [].forEach.call(c.children, function (b) {
+                           if (skipped(b)) return;
+                           var m = top + (b.classList.contains('r-gap') ? size * 0.95 : 0); top = 0;
+                           if (b.matches('ul')) { var l = list(b, k, 0); l.margin[1] = m; content.push(l); }
+                           else if (b.matches('p') && b.textContent.trim()) content.push({ text: trimRuns(runs(b)), margin: [0, m, 0, 0] });
+                           else if (b.matches('p')) top = m;
+                        });
+                     });
+                  }
+               });
+               var pages = { n: 1 };
+               return {
+                  pages: pages,
+                  def: {
+                     pageSize: 'LETTER',
+                     pageMargins: [54 * Math.max(k, 0.8), 36, 54 * Math.max(k, 0.8), 36],
+                     info: { title: (paper.querySelector('h1') || {}).textContent + ' — Resume', author: 'Isidore Lu' },
+                     defaultStyle: { font: 'Times', fontSize: size, lineHeight: 1.15 },
+                     content: content,
+                     footer: function (cur, count) { pages.n = Math.max(pages.n, count); return null; }
+                  }
+               };
+            }
+            function makePdf() {
+               var ks = [];
+               for (var k = 1; k > 0.74; k -= 0.025) ks.push(Math.round(k * 1000) / 1000);
+               var i = 0;
+               function attempt() {
+                  var d = docDef(ks[i]);
+                  var pdf = pdfMake.createPdf(d.def);
+                  return Promise.resolve(pdf.getBuffer()).then(function () {
+                     if (d.pages.n <= 1 || i === ks.length - 1) {
+                        if (d.pages.n > 1) console.warn('[resume] still ' + d.pages.n + ' pages at the smallest size — hide a few rows on the PDF');
+                        return pdf;
+                     }
+                     i++;
+                     return attempt();
+                  });
+               }
+               return attempt();
+            }
+            var btn = document.getElementById('resume-pdf');
+            if (btn) {
+               ['pointerenter', 'focus', 'touchstart'].forEach(function (ev) {
+                  btn.addEventListener(ev, function () { pdfLib().catch(function () {}); }, { once: true, passive: true });
+               });
+               btn.addEventListener('click', function () {
+                  var label = btn.textContent;
+                  btn.disabled = true; btn.textContent = 'Preparing PDF…';
+                  pdfLib().then(makePdf).then(function (pdf) {
+                     return pdf.download((root.getAttribute('data-pdf-name') || 'Resume') + '.pdf');
+                  }).catch(function (e) {
+                     console.error('[resume]', e);
+                     window.print();   // fallback: the print view is set up to print just the resume
+                  }).then(function () { btn.disabled = false; btn.textContent = label; });
+               });
+            }
+
+            /* ---------- go ---------- */
+            Promise.all([
+               load('page', ['SETTING', 'VALUE']),
+               load('resume', ['SECTION', 'NAME', 'TEXT'])
+            ]).then(function (d) {
+               render(d[0], d[1]);
+               if (/[?&]export\b/.test(location.search)) showExport();
+            }).catch(function (e) { console.warn('[resume] keeping the built-in copy:', e.message); });
+
+            // resume.html?export → shows the rendered block so you can paste it into resume.html as the search-engine copy
+            function showExport() {
+               var box = document.createElement('textarea');
+               box.value = root.outerHTML;
+               box.style.cssText = 'width:100%;height:40vh;font:12px monospace;margin:1em 0';
+               box.readOnly = true;
+               root.parentNode.insertBefore(box, root);
+               box.select();
+            }
+         })();
+      </script>
+
+   </body>
+</html>
