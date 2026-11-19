@@ -75,7 +75,14 @@ header {
 .col {
    position: relative;
     flex: 1;
+    min-width: 0;
     padding:0 1rem;
+}
+
+@media (max-width: 768px) {
+   main > .row > .col {
+      flex: 1 1 100%;
+   }
 }
 
 section {
@@ -120,6 +127,8 @@ section {
    border: 1px solid black;
    margin-top: 0.5em;
 }
+
+/* .updates iframe { display: block; } */
 
 .pinned-note {
    font-size: 0.9em;
